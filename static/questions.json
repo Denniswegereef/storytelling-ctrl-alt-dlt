@@ -1,0 +1,50 @@
+{
+  "startMessage": "Hello welcome to the quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Welcome to question 1",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Take me to quesiton 2",
+          "goId": 2
+        },
+        {
+          "answer": "Move me to quesiton 3",
+          "goId": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Welcome to question 2",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Take me to quesiton 1",
+          "goId": 1
+        },
+        {
+          "answer": "Move me to quesiton 2",
+          "goId": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Welcome to question 3",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Take me to quesiton 1",
+          "goId": 1
+        },
+        {
+          "answer": "Move me to quesiton 2",
+          "goId": 2
+        }
+      ]
+    }
+  ]
+}
