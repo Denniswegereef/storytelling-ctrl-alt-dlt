@@ -1,5 +1,6 @@
 {
   "startMessage": "Hello welcome to the quiz",
+  "timeQuestion": 10,
   "questions": [
     {
       "id": 1,
@@ -26,8 +27,8 @@
           "goId": 1
         },
         {
-          "answer": "Move me to quesiton 2",
-          "goId": 2
+          "answer": "End this game",
+          "goId": "end"
         }
       ]
     },
@@ -41,8 +42,8 @@
           "goId": 1
         },
         {
-          "answer": "Move me to quesiton 2",
-          "goId": 2
+          "answer": "End this game",
+          "goId": "end"
         }
       ]
     }
