@@ -8,6 +8,9 @@ const createStore = () => {
     mutations: {
       addQuestion(state, c) {
         state.questionsAnswered.push(c)
+      },
+      resetStory(state) {
+        state.questionsAnswered = []
       }
     }
   })

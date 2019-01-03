@@ -21,6 +21,8 @@
     </section>
 
     <questionBullets/>
+    <resetStory/>
+
   </section>
 </template>
 
@@ -30,6 +32,7 @@ import json from 'static/questions.json'
 import questionBullets from '~/components/questionBullets.vue'
 import answerButton from '~/components/answerButton.vue'
 import questionTimer from '~/components/questionTimer.vue'
+import resetStory from '~/components/resetStory.vue'
 
 export default {
   validate({ params }) {
@@ -44,7 +47,8 @@ export default {
   components: {
     questionBullets,
     answerButton,
-    questionTimer
+    questionTimer,
+    resetStory
   },
   data() {
     return {
