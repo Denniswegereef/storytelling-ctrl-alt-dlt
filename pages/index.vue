@@ -1,8 +1,7 @@
 <template>
   <section class="container">
-    <h1>
-      <nuxt-link to="/question/1">Go to first question one</nuxt-link>
-    </h1>
+    <h1>Welcome to the story</h1>
+    <nuxt-link to="/question/1">Start</nuxt-link>
   </section>
 </template>
 
@@ -10,5 +9,5 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>

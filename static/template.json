@@ -1,0 +1,75 @@
+{
+  "startMessage": "Hello welcome to the quiz",
+  "timeQuestion": 10,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Welcome to question 1",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Take me to quesiton 2",
+          "goId": "random",
+          "randomId": [7, 3, 8],
+          "changes": [20, 50, 100]
+        },
+        {
+          "answer": "Move me to quesiton 3",
+          "goId": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Welcome to question 2",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Take me to quesiton 1",
+          "goId": 1
+        },
+        {
+          "answer": "End this game",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Welcome to question 3",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Take me to quesiton 1",
+          "goId": 1
+        },
+        {
+          "answer": "End this game",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "HAHAHAHAH DIT IS 20%",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "End this game",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "HAHAHAHAH DIT IS 80%",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "End this game",
+          "goId": "end"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="screen">
     <nuxt/>
   </div>
 </template>
@@ -25,6 +25,15 @@ html {
 }
 
 body {
-  padding: 10px;
+  background-color: darkGrey;
+}
+
+.screen {
+  border: 1px solid red;
+  height: 400px;
+  width: 800px;
+  padding: 20px 10px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 </style>

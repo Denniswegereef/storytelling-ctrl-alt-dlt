@@ -1,12 +1,12 @@
 <template>
   <section>
-    <section>
+    <!-- <section>
       current ID = {{ currentId }}
       Single question on this page
-    </section>
+    </section> -->
 
     <section>
-      This is question  {{ currentQuestion.id }}
+      <!-- This is question  {{ currentQuestion.id }} -->
       <h2>{{ currentQuestion.question }}</h2>
 
       <div class="question_answers">
