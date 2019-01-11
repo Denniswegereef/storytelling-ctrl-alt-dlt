@@ -13,11 +13,7 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    console.log(this.$store.state.questionsAnswered)
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

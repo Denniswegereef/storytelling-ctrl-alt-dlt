@@ -3,11 +3,15 @@ import Vuex from 'vuex'
 const createStore = () => {
   return new Vuex.Store({
     state: () => ({
-      questionsAnswered: []
+      questionsAnswered: [],
+      jsonData: 'empty'
     }),
     mutations: {
-      addQuestion(state, c) {
-        state.questionsAnswered.push(c)
+      addJson(state, json) {
+        state.jsonData = json
+      },
+      addQuestion(state, question) {
+        state.questionsAnswered.push(question)
       },
       resetStory(state) {
         state.questionsAnswered = []

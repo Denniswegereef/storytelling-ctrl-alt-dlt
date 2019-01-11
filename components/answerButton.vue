@@ -58,9 +58,8 @@ export default {
         return
       }
 
+      // Just push regular router
       this.$router.push(`/question/${answer.goId}`)
-
-      console.log(`Pushing router to ${answer.goId}`)
     }
   }
 }

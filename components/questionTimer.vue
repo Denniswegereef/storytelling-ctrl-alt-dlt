@@ -1,5 +1,10 @@
 <template>
-  <div>Gonna be timing {{ currentTime }}</div>
+  <section>
+    <div>Gonna be timing {{ currentTime }}</div>
+    <div
+      id="timer-countdown"
+      :style="{ width: timerWidth }"/>
+  </section>
 </template>
 
 <script>
@@ -12,20 +17,23 @@ export default {
   },
   data() {
     return {
-      currentTime: 0
+      currentTime: 0,
+      timerWidth: '100%'
     }
   },
   mounted() {
-    this.currentTime = this.time
-
     // setInterval(function() {
-    //   this.currentTime = 5
-    //   console.log(this.currentTime)
-    //   console.log('interval me bitch')
+    //   console.log(this.timerWidth)
+    //   this.timerWidth = '20%'
     // }, 1000)
   }
 }
 </script>
 
 <style lang="scss" scoped>
+#timer-countdown {
+  height: 20px;
+  background-color: red;
+  transition: 1s all;
+}
 </style>

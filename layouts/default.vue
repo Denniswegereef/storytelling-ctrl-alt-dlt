@@ -1,8 +1,19 @@
 <template>
   <div class="screen">
     <nuxt/>
+    <questionBullets/>
   </div>
 </template>
+
+<script>
+import questionBullets from '~/components/questionBullets.vue'
+
+export default {
+  components: {
+    questionBullets
+  }
+}
+</script>
 
 <style>
 html {
