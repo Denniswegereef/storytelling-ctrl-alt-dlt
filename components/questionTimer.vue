@@ -19,25 +19,24 @@ export default {
   computed: {
     currentTime() {
       return 10
-      // let seconds = 10
-      //
-      // return function decreaseTimer() {
-      //   seconds--
-      //   console.log(seconds)
-      //   if (seconds === 0) {
-      //     return 'DONE'
-      //     clearInterval(intervalID)
-      //   }
-      // }
-      //
-      // setInterval(this.decreaseTimer(), 1000)
     }
   },
   mounted() {
-    console.log(this.$refs.timer)
-    // setInterval(function() {
-    //   console.log('TICK TICK')
-    // }, 1000)
+    let self = this
+    let timerDiv = this.$refs.timer
+    let time = 5
+    timerDiv.style.setProperty('--timer', `${time}s`)
+
+    timerDiv.addEventListener('animationend', function() {
+      self.animationEnd()
+    })
+  },
+  methods: {
+    animationEnd() {
+      // Send to parent?
+      // Or push from here?
+      //this.$router.push('/explanation')
+    }
   }
 }
 </script>
@@ -47,8 +46,9 @@ export default {
   height: 20px;
   background-color: red;
   animation-name: countdown;
-  animation-duration: 10s;
+  animation-duration: var(--timer);
   animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes countdown {
