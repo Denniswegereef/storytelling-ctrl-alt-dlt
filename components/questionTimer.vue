@@ -1,9 +1,10 @@
 <template>
   <section>
-    <div>Gonna be timing {{ currentTime }}</div>
     <div
       id="timer-countdown"
-      :style="{ width: timerWidth }"/>
+      ref="timer">
+      {{ currentTime }}
+    </div>
   </section>
 </template>
 
@@ -15,16 +16,27 @@ export default {
       default: 10
     }
   },
-  data() {
-    return {
-      currentTime: 0,
-      timerWidth: '100%'
+  computed: {
+    currentTime() {
+      return 10
+      // let seconds = 10
+      //
+      // return function decreaseTimer() {
+      //   seconds--
+      //   console.log(seconds)
+      //   if (seconds === 0) {
+      //     return 'DONE'
+      //     clearInterval(intervalID)
+      //   }
+      // }
+      //
+      // setInterval(this.decreaseTimer(), 1000)
     }
   },
   mounted() {
+    console.log(this.$refs.timer)
     // setInterval(function() {
-    //   console.log(this.timerWidth)
-    //   this.timerWidth = '20%'
+    //   console.log('TICK TICK')
     // }, 1000)
   }
 }
@@ -34,6 +46,17 @@ export default {
 #timer-countdown {
   height: 20px;
   background-color: red;
-  transition: 1s all;
+  animation-name: countdown;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+@keyframes countdown {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
 }
 </style>

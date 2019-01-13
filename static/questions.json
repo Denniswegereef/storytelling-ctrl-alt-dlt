@@ -1,11 +1,19 @@
 {
   "startMessage": "Hello welcome to the quiz",
   "timeQuestion": 10,
+  "contextScenario": [
+    "Scenario 1",
+    "Scenario 2",
+    "Scenario 3",
+    "Scenario 4",
+    "Scenario 6",
+    "Scenario 6"
+  ],
   "questions": [
     {
       "id": 1,
       "question": "Er begint een auto voor je te rijden en laat een stopsein zien je hebt geen idee waarom",
-      "image": "path/to/image",
+      "image": "test.jpg",
       "possibleAnswers": [
         {
           "answer": "Je gaat meteen aan de kant van de weg staan",

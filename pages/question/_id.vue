@@ -3,13 +3,17 @@
     <section>
       <h2>{{ currentQuestion.question }}</h2>
 
+      <img
+        :src="image"
+        alt="image">
+
       <div class="question_answers">
         <answerButton
           :current-question="currentQuestion.question"
           :possible-answers="currentQuestion.possibleAnswers"/>
       </div>
     </section>
-    
+
     <resetStory/>
   </section>
 </template>
@@ -38,7 +42,8 @@ export default {
   },
   data() {
     return {
-      currentQuestion: 1
+      currentQuestion: '',
+      image: ''
     }
   },
   mounted() {
@@ -49,12 +54,18 @@ export default {
     this.currentQuestion = this.$store.state.jsonData.questions.find(
       question => question.id === Number(currentParam)
     )
+    this.image = require(`~/assets/images/1.jpg`)
+    ///
   }
   // transition: 'bounce'
 }
 </script>
 
 <style lang="scss" scoped>
+img {
+  height: 200px;
+  margin: 0 auto;
+}
 h1 {
   span {
     color: red;

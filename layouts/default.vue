@@ -1,17 +1,16 @@
 <template>
   <div class="screen">
     <nuxt/>
-    <questionBullets/>
+    <!-- <questionBullets/> -->
   </div>
 </template>
 
 <script>
-import questionBullets from '~/components/questionBullets.vue'
-
+// import questionBullets from '~/components/questionBullets.vue'
 export default {
-  components: {
-    questionBullets
-  }
+  // components: {
+  //   questionBullets
+  // }
 }
 </script>
 

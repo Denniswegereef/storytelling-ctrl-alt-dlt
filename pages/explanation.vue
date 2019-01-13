@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>Explenation of the app</h1>
-    <nuxt-link to="/question/1">Start</nuxt-link>
+    <nuxt-link to="/question/context">Start</nuxt-link>
   </section>
 </template>
 
