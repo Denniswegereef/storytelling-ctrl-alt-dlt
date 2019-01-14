@@ -3,14 +3,20 @@
     <section>
       <h2>{{ currentQuestion.question }}</h2>
 
-      <img
-        :src="image"
-        alt="image">
+      <div>
+        <img
+          :src="image"
+          alt="image">
+        <questionTimer
+          @clicked="nextQuestion"/>
+      </div>
 
       <div class="question_answers">
         <answerButton
           :current-question="currentQuestion.question"
-          :possible-answers="currentQuestion.possibleAnswers"/>
+          :possible-answers="currentQuestion.possibleAnswers"
+          :next-random="nextQuestionRandom"
+          :force="forceNext"/>
       </div>
     </section>
 
@@ -42,20 +48,32 @@ export default {
   },
   data() {
     return {
-      currentQuestion: '',
-      image: ''
+      forceNext: false
     }
   },
-  mounted() {
-    // Set params and ID's
-    let currentParam = this.$route.params.id
-
-    // Find question for current page
-    this.currentQuestion = this.$store.state.jsonData.questions.find(
-      question => question.id === Number(currentParam)
-    )
-    this.image = require(`~/assets/images/1.jpg`)
-    ///
+  computed: {
+    currentParam() {
+      return this.$route.params.id
+    },
+    currentQuestion() {
+      return this.$store.state.jsonData.questions.find(
+        question => question.id === Number(this.currentParam)
+      )
+    },
+    nextQuestionRandom() {
+      let random = Math.floor(
+        Math.random() * this.currentQuestion.possibleAnswers.length
+      )
+      return this.currentQuestion.possibleAnswers[random]
+    },
+    image() {
+      return require(`~/assets/images/1.jpg`)
+    }
+  },
+  methods: {
+    nextQuestion(value) {
+      this.forceNext = true
+    }
   }
   // transition: 'bounce'
 }

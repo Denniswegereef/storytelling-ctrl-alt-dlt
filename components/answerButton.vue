@@ -16,6 +16,14 @@ export default {
     smallButton
   },
   props: {
+    force: {
+      type: Boolean,
+      default: false
+    },
+    nextRandom: {
+      type: Object,
+      default: () => {}
+    },
     currentQuestion: {
       type: String,
       default: 'no question yet'
@@ -23,6 +31,13 @@ export default {
     possibleAnswers: {
       type: Array,
       default: () => []
+    }
+  },
+  watch: {
+    force() {
+      if (this.force) {
+        this.goNextQuestion(this.$props.nextRandom)
+      }
     }
   },
   methods: {
@@ -60,6 +75,9 @@ export default {
 
       // Just push regular router
       this.$router.push(`/question/${answer.goId}`)
+    },
+    test() {
+      console.log('TEST FROM PARENT')
     }
   }
 }

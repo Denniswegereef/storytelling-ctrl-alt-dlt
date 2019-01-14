@@ -1,6 +1,14 @@
 {
   "startMessage": "Hello welcome to the quiz",
   "timeQuestion": 10,
+  "contextScenario": [
+    "Scenario 1",
+    "Scenario 2",
+    "Scenario 3",
+    "Scenario 4",
+    "Scenario 6",
+    "Scenario 6"
+  ],
   "questions": [
     {
       "id": 1,

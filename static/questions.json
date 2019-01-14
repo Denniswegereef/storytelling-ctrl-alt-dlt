@@ -20,12 +20,8 @@
           "goId": 101
         },
         {
-          "answer": "Je wacht tot er een goed moment is om van de weg te gaan",
-          "goId": 201
-        },
-        {
           "answer": "Je blijft doorijden, je ziet geen reden om te stoppen want je hebt niks verkeerd gerdaan",
-          "goId": 301
+          "goId": 102
         }
       ]
     },

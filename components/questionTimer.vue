@@ -1,21 +1,17 @@
 <template>
   <section>
-    <div
-      id="timer-countdown"
-      ref="timer">
-      {{ currentTime }}
+    <div id="timer-holder">
+      <div
+        id="timer-countdown"
+        ref="timer">
+        {{ currentTime }}
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  props: {
-    time: {
-      type: Number,
-      default: 10
-    }
-  },
   computed: {
     currentTime() {
       return 10
@@ -24,7 +20,7 @@ export default {
   mounted() {
     let self = this
     let timerDiv = this.$refs.timer
-    let time = 5
+    let time = 2
     timerDiv.style.setProperty('--timer', `${time}s`)
 
     timerDiv.addEventListener('animationend', function() {
@@ -33,30 +29,38 @@ export default {
   },
   methods: {
     animationEnd() {
+      //console.log('last thing is ' + this.$props.nextId)
       // Send to parent?
       // Or push from here?
-      //this.$router.push('/explanation')
+      // this.$router.push(this.$props.nextId)
+      this.$emit('clicked', 'nextQuestion')
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#timer-countdown {
-  height: 20px;
-  background-color: red;
-  animation-name: countdown;
-  animation-duration: var(--timer);
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
+#timer {
+  &-holder {
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+  &-countdown {
+    background-color: red;
+    animation-name: countdown;
+    animation-delay: 1s;
+    animation-duration: var(--timer);
+    animation-fill-mode: forwards;
+  }
 }
 
 @keyframes countdown {
   from {
-    width: 100%;
+    transform: translateX(0);
   }
   to {
-    width: 0;
+    transform: translateX(-100%);
   }
 }
 </style>
