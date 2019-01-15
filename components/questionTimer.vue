@@ -4,7 +4,7 @@
       <div
         id="timer-countdown"
         ref="timer">
-        {{ currentTime }}
+        .
       </div>
     </div>
   </section>
@@ -12,15 +12,10 @@
 
 <script>
 export default {
-  computed: {
-    currentTime() {
-      return 10
-    }
-  },
   mounted() {
     let self = this
     let timerDiv = this.$refs.timer
-    let time = 15
+    let time = this.$store.state.jsonData.timeQuestion
     timerDiv.style.setProperty('--timer', `${time}s`)
 
     timerDiv.addEventListener('animationend', function() {
