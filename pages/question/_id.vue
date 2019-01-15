@@ -85,8 +85,6 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  // height: 200px;
-  // margin: var(--default-padding);
   width: 100%;
 }
 
