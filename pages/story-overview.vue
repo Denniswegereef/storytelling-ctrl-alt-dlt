@@ -6,6 +6,7 @@
       :key="index"
       class="bullet">
       <section>
+        <h1>{{ questionAnswer.id }}</h1>
         <h4>{{ questionAnswer.q }}</h4>
         <h5>{{ questionAnswer.a }}</h5>
       </section>

@@ -47,6 +47,7 @@ export default {
     animation-name: countdown;
     animation-duration: var(--timer);
     animation-fill-mode: forwards;
+    animation-timing-function: linear;
   }
 }
 

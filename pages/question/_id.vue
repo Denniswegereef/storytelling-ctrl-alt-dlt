@@ -14,6 +14,7 @@
       <div class="question_answers">
         <answerButton
           :current-question="currentQuestion.question"
+          :current-id="currentQuestion.id"
           :possible-answers="currentQuestion.possibleAnswers"
           :next-random="nextQuestionRandom"
           :force="forceNext"/>

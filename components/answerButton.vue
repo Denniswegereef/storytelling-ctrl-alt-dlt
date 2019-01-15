@@ -28,6 +28,10 @@ export default {
       type: String,
       default: 'no question yet'
     },
+    currentId: {
+      type: Number,
+      default: 0
+    },
     possibleAnswers: {
       type: Array,
       default: () => []
@@ -44,6 +48,7 @@ export default {
     goNextQuestion(answer) {
       // Send question + answer to the vuex store
       const question = {
+        id: this.currentId,
         q: this.currentQuestion,
         a: answer.answer
       }
