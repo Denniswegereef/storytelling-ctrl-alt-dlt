@@ -75,9 +75,6 @@ export default {
 
       // Just push regular router
       this.$router.push(`/question/${answer.goId}`)
-    },
-    test() {
-      console.log('TEST FROM PARENT')
     }
   }
 }

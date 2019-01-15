@@ -20,7 +20,7 @@ export default {
   mounted() {
     let self = this
     let timerDiv = this.$refs.timer
-    let time = 2
+    let time = 15
     timerDiv.style.setProperty('--timer', `${time}s`)
 
     timerDiv.addEventListener('animationend', function() {
@@ -29,10 +29,6 @@ export default {
   },
   methods: {
     animationEnd() {
-      //console.log('last thing is ' + this.$props.nextId)
-      // Send to parent?
-      // Or push from here?
-      // this.$router.push(this.$props.nextId)
       this.$emit('clicked', 'nextQuestion')
     }
   }
@@ -49,7 +45,6 @@ export default {
   &-countdown {
     background-color: red;
     animation-name: countdown;
-    animation-delay: 1s;
     animation-duration: var(--timer);
     animation-fill-mode: forwards;
   }
