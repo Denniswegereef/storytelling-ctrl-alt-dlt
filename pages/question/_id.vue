@@ -71,7 +71,7 @@ export default {
       return this.currentQuestion.possibleAnswers[random]
     },
     image() {
-      return require(`~/assets/images/${this.currentQuestion.id}.jpg`)
+      return require(`~/assets/images/1.jpg`)
     }
   },
   methods: {
