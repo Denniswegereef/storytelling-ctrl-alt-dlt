@@ -4,6 +4,7 @@
       v-for="answer in possibleAnswers"
       :key="answer.goId"
       :text="answer.answer"
+      :button-type="'answer-button'"
       @click.native="goNextQuestion(answer)"/>
   </section>
 </template>
@@ -89,14 +90,12 @@ export default {
 .answer-buttons {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  padding: var(--default-padding);
 }
-
-a {
-  color: #fff;
+button {
   background-color: blue;
-  padding: 10px 15px;
-  margin-right: 10px;
-  cursor: pointer;
+  font-size: 17px;
   &:hover {
     background-color: darkBlue;
   }
