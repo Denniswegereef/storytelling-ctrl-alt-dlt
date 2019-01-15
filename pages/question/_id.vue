@@ -3,7 +3,7 @@
     <section>
       <bigHeader :header-text="currentQuestion.question"/>
 
-      <div>
+      <div class="img-container">
         <img
           :src="image"
           alt="image">
@@ -85,9 +85,15 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  height: 200px;
-  margin: 0 auto;
+  // height: 200px;
+  // margin: var(--default-padding);
+  width: 100%;
 }
+
+.img-container {
+  padding: var(--default-padding);
+}
+
 h1 {
   span {
     color: red;

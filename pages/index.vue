@@ -1,10 +1,12 @@
 <template>
   <section class="container">
     <h1>Mag ik ook nee zeggen?</h1>
-    <p>Welkom bij Mag Ik Ook Nee Zeggen. <br> Hier ga je door een verhaal, waar jij bepaalt wat er gebeurt. Je komt er achter hoe het is om als burger staande gehouden worden en snel te moeten reageren op verschillende situaties.</p>
-    <nuxt-link to="/explanation">
-      <bigButton :text="'start'"/>
-    </nuxt-link>
+    <div class="bodyContainer">
+      <p>Welkom bij Mag Ik Ook Nee Zeggen. <br> Hier ga je door een verhaal, waar jij bepaalt wat er gebeurt. Je komt er achter hoe het is om als burger staande gehouden worden en snel te moeten reageren op verschillende situaties.</p>
+      <bigButton
+        :text="'start'"
+        :to="'/explanation'"/>
+    </div>
   </section>
 </template>
 
@@ -28,7 +30,11 @@ h1 {
   padding: 1rem 2rem;
 }
 p {
-  padding: var(--default-padding);
+  // padding: var(--default-padding);
   margin-top: 2rem;
+  margin-bottom: 8rem;
+}
+.bodyContainer {
+  padding: var(--default-padding);
 }
 </style>
