@@ -1,8 +1,8 @@
 <template>
   <section>
     <section>
-      <smallHeader :header-text="currentQuestion.question"/>
-    
+      <bigHeader :header-text="currentQuestion.question"/>
+
       <div>
         <img
           :src="image"
@@ -30,7 +30,7 @@ import questionBullets from '~/components/questionBullets.vue'
 import answerButton from '~/components/answerButton.vue'
 import questionTimer from '~/components/questionTimer.vue'
 import resetStory from '~/components/resetStory.vue'
-import smallHeader from '~/components/smallHeader.vue'
+import bigHeader from '~/components/bigHeader.vue'
 
 export default {
   validate({ params, store }) {
@@ -47,7 +47,7 @@ export default {
     answerButton,
     questionTimer,
     resetStory,
-    smallHeader
+    bigHeader
   },
   data() {
     return {

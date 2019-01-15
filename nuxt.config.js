@@ -26,7 +26,7 @@ module.exports = {
   */
   css: [
     { src: '~assets/scss/default.scss', lang: 'scss' },
-    { src: '~assets/scss/color.scss', lang: 'scss' },
+    { src: '~assets/scss/variables.scss', lang: 'scss' },
     { src: '~assets/scss/headers.scss', lang: 'scss' }
   ],
 

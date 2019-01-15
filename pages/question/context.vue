@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import smallButton from '~/components/small/button.vue'
+import bigButton from '~/components/small/bigButton.vue'
 
 export default {
   validate({ params, query, store }) {
@@ -20,7 +20,7 @@ export default {
     return false
   },
   components: {
-    smallButton
+    bigButton
   },
   computed: {
     roll() {

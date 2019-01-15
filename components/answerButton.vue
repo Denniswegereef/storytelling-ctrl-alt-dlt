@@ -1,6 +1,6 @@
 <template>
   <section class="answer-buttons">
-    <smallButton
+    <bigButton
       v-for="answer in possibleAnswers"
       :key="answer.goId"
       :text="answer.answer"
@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import smallButton from '~/components/small/button.vue'
+import bigButton from '~/components/small/bigButton.vue'
 
 export default {
   components: {
-    smallButton
+    bigButton
   },
   props: {
     force: {

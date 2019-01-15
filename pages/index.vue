@@ -1,23 +1,33 @@
 <template>
   <section class="container">
-    <!-- <smallHeader :header-text="'DIT IS DE DYNAMISCHE TEKST'"/> -->
-    <h1>Welcome to the story</h1>
+    <h1>Mag ik ook nee zeggen?</h1>
+    <p>Welkom bij Mag Ik Ook Nee Zeggen. <br> Hier ga je door een verhaal, waar jij bepaalt wat er gebeurt. Je komt er achter hoe het is om als burger staande gehouden worden en snel te moeten reageren op verschillende situaties.</p>
     <nuxt-link to="/explanation">Go to explanation</nuxt-link>
+    <bigButton :text="'start'"/>
   </section>
 </template>
 
 <script>
-import smallHeader from '~/components/smallHeader.vue'
+// import bigHeader from '~/components/bigHeader.vue'
+import bigButton from '~/components/small/bigButton.vue'
 
 export default {
   components: {
-    smallHeader
+    bigButton
   }
 }
 </script>
 
 <style lang="scss" scoped>
-// h1 {
-//   color: var(--default-color);
-// }
+h1 {
+  background-color: var(--default-color);
+  color: var(--black-color);
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}
+p {
+  padding: var(--default-padding);
+  margin-top: 2rem;
+}
 </style>
