@@ -36,8 +36,9 @@ button {
   border-radius: 7px;
   width: 100%;
   color: var(--black-color);
-  padding: 20px 30px;
-  margin-top: 2rem;
+  padding: 18px 10px;
+  min-height: 70px;
+
   &:hover {
     background-color: darkBlue;
   }
@@ -46,6 +47,7 @@ button {
 .default {
   background-color: black;
   background-color: var(--default-color);
+  margin-top: 32px;
 }
 
 .answer-button {
@@ -53,5 +55,6 @@ button {
   font-size: 17px;
   font-weight: normal;
   color: var(--white-color);
+  margin-top: 20px;
 }
 </style>

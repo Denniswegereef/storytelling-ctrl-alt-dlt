@@ -33,12 +33,12 @@ export default {
 <style lang="scss" scoped>
 #timer {
   &-holder {
-    height: 20px;
+    height: 10px;
     width: 100%;
     overflow: hidden;
   }
   &-countdown {
-    background-color: red;
+    background-color: var(--default-color);
     animation-name: countdown;
     animation-duration: var(--timer);
     animation-fill-mode: forwards;

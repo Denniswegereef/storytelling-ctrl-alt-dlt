@@ -2,16 +2,15 @@
   <section>
     <section>
       <bigHeader :header-text="currentQuestion.question"/>
-
       <div class="img-container">
         <img
           :src="image"
           alt="image">
-
-        <questionTimer
-          @clicked="nextQuestion"/>
+        <div class="timer-container">
+          <questionTimer
+            @clicked="nextQuestion"/>
+        </div>
       </div>
-
       <div class="question_answers">
         <answerButton
           :current-question="currentQuestion.question"
@@ -85,7 +84,13 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  width: 100%;
+  width: 305px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  top: 10rem;
+  right: 0;
 }
 
 .img-container {
@@ -97,7 +102,9 @@ h1 {
     color: red;
   }
 }
-
+.timer-container {
+  margin-top: 148px;
+}
 section {
   margin-bottom: 10px;
 }
