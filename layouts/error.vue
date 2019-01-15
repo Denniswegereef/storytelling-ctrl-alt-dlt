@@ -1,9 +1,10 @@
 <template>
   <section>
-    <popModal :show="showPopModal"/>
-    <div
-      class="clickSomething"
-      @click="togglePopModal()">lol</div>
+    <popModal
+      :show="showPopModal"
+      @click="togglePopModal()"/>
+      
+    <div class="clickSomething">lol</div>
     <h1>not found</h1>
     <nuxt-link to="/">go back</nuxt-link>
   </section>
@@ -20,14 +21,11 @@ export default {
   },
   data() {
     return {
-      showPopModal: false
+      showPopModal: ''
     }
   },
   methods: {
-    togglePopModal() {
-      this.showPopModal = true
-      console.log('toggle')
-    }
+    togglePopModal() {}
   }
 }
 </script>

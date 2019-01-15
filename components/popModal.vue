@@ -1,6 +1,6 @@
 <template>
   <section
-    v-if="showModal"
+    v-if="show === true"
     class="pop-up">
     <h1>This is a pop-modal</h1>
     <p>Dit is tekst</p>
@@ -15,18 +15,13 @@
 export default {
   props: {
     show: {
-      type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    showModal() {
-      return this.show
+      type: String,
+      default: ''
     }
   },
   methods: {
-    close() {
-      this.showModal = false
+    togglePopModal() {
+      console.log('CLICK')
     }
   }
 }

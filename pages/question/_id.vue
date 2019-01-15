@@ -7,6 +7,7 @@
         <img
           :src="image"
           alt="image">
+
         <questionTimer
           @clicked="nextQuestion"/>
       </div>
@@ -70,7 +71,7 @@ export default {
       return this.currentQuestion.possibleAnswers[random]
     },
     image() {
-      return require(`~/assets/images/1.jpg`)
+      return require(`~/assets/images/${this.currentQuestion.id}.jpg`)
     }
   },
   methods: {
