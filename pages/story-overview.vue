@@ -27,8 +27,8 @@ import json from 'static/insights.json'
 export default {
   validate({ params, store }) {
     // Validate if question exists otherwise send to error
-    if (!store.state.jsonData === 'empty') {
-      return true
+    if (store.state.jsonData === 'empty') {
+      return false
     }
     return true
   },
