@@ -1,28 +1,30 @@
 <template>
   <section class="container">
     <!-- header -->
-    <h2 class="intro">Je bent klaar! Scroll verder om jouw scenario te bekijken</h2>
-
-    <div
-      v-for="(questionAnswer, index) in $store.state.questionsAnswered"
-      :key="index"
-      class="overview-single">
-      <h2>{{ questionAnswer.q }}</h2>
-      <p>Jouw antwoord</p>
-      <h3>{{ questionAnswer.a }}</h3>
+    <smallHeader :header-text="'Overzicht'"/>
+    <div class="body-container">
+      <hp class="intro">Je bent klaar! Scroll verder om jouw scenario te bekijken</p>
 
       <div
-        v-if="checkAvailable(questionAnswer.id)"
-        class="insight">
-        <h2>{{ findInsight(questionAnswer.id) }}</h2>
+        v-for="(questionAnswer, index) in $store.state.questionsAnswered"
+        :key="index"
+        class="overview-single">
+        <h2>{{ questionAnswer.q }}</h2>
+        <p>Jouw antwoord</p>
+        <h3>{{ questionAnswer.a }}</h3>
+        <div
+          v-if="checkAvailable(questionAnswer.id)"
+          class="insight">
+          <h2>{{ findInsight(questionAnswer.id) }}</h2>
+        </div>
       </div>
     </div>
-
   </section>
 </template>
 
 <script>
 import json from 'static/insights.json'
+import smallHeader from '~/components/small/smallHeader.vue'
 
 export default {
   validate({ params, store }) {
@@ -31,6 +33,9 @@ export default {
       return false
     }
     return true
+  },
+  components: {
+    smallHeader
   },
   data() {
     return {
@@ -70,7 +75,9 @@ section {
     color: #fff;
   }
 }
-
+.body-container {
+  padding: var(--default-padding);
+}
 .overview-single {
   margin-bottom: 40px;
 }
