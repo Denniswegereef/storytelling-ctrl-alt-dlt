@@ -2,22 +2,24 @@
   <section>
     <section>
       <bigHeader :header-text="currentQuestion.question"/>
-      <div class="img-container">
-        <img
-          :src="image"
-          alt="image">
-        <div class="timer-container">
-          <questionTimer
-            @clicked="nextQuestion"/>
+      <div class="container">
+        <div class="img-container">
+          <img
+            :src="image"
+            alt="image">
+          <div class="timer-container">
+            <questionTimer
+              @clicked="nextQuestion"/>
+          </div>
         </div>
-      </div>
-      <div class="question_answers">
-        <answerButton
-          :current-question="currentQuestion.question"
-          :current-id="currentQuestion.id"
-          :possible-answers="currentQuestion.possibleAnswers"
-          :next-random="nextQuestionRandom"
-          :force="forceNext"/>
+        <div class="question_answers">
+          <answerButton
+            :current-question="currentQuestion.question"
+            :current-id="currentQuestion.id"
+            :possible-answers="currentQuestion.possibleAnswers"
+            :next-random="nextQuestionRandom"
+            :force="forceNext"/>
+        </div>
       </div>
     </section>
 
@@ -84,13 +86,14 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  width: 305px;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  top: 10rem;
-  right: 0;
+  width: 100%;
+  // position: absolute;
+  // transform: translateY(-40px);
+  // margin-left: auto;
+  // margin-right: auto;
+  // left: 0;
+  // top: 10rem;
+  // right: 0;
 }
 
 .img-container {
@@ -103,9 +106,13 @@ h1 {
   }
 }
 .timer-container {
-  margin-top: 148px;
+  transform: translateY(-14px);
 }
 section {
   margin-bottom: 10px;
+}
+
+.container {
+  transform: translateY(-40px);
 }
 </style>
