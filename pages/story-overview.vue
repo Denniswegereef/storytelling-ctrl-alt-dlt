@@ -8,8 +8,9 @@
         v-for="(questionAnswer, index) in $store.state.questionsAnswered"
         :key="index"
         class="overview-single">
+        <hr>
         <h2>{{ questionAnswer.q }}</h2>
-        <p>Jouw antwoord</p>
+        <h3>Jouw antwoord</h3>
         <h3>{{ questionAnswer.a }}</h3>
         <div
           v-if="checkAvailable(questionAnswer.id)"
@@ -29,7 +30,7 @@ export default {
   validate({ params, store }) {
     // Validate if question exists otherwise send to error
     if (store.state.jsonData === 'empty') {
-      return false
+      return true
     }
     return true
   },
@@ -58,7 +59,8 @@ export default {
 
 <style lang="scss" scoped>
 .intro {
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
+  text-align: center;
 }
 section {
   margin-bottom: 20px;
@@ -74,10 +76,17 @@ section {
     color: #fff;
   }
 }
+.answer {
+  margin-top: 20px;
+}
 .body-container {
   padding: var(--default-padding);
 }
 .overview-single {
   margin-bottom: 40px;
+}
+hr {
+  width: 100%;
+  margin: 20px 0;
 }
 </style>
