@@ -1,9 +1,9 @@
 <template lang="html">
   <header>
-    <img
-      src="../../assets/images/home.png"
-      alt="home-icon">
     <h1>{{ headerText }}</h1>
+    <img
+      src="../../assets/images/share.png"
+      alt="home-icon">
   </header>
 </template>
 
@@ -34,10 +34,15 @@ header {
   width: 100%;
   height: 90px;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 h1 {
   text-align: center;
-  transform: translateY(-30px);
+  width: 100%;
+  // transform: translateY(-30px);
   text-transform: uppercase;
 }
 </style>

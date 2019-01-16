@@ -58,5 +58,8 @@ button {
   font-weight: normal;
   color: var(--white-color);
   margin-top: var(--default-margin);
+  &:hover {
+    background-color: var(--second-color-dark);
+  }
 }
 </style>

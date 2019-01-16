@@ -94,10 +94,6 @@ export default {
   padding: 0 var(--default-padding);
 }
 button {
-  background-color: blue;
   font-size: 17px;
-  &:hover {
-    background-color: darkBlue;
-  }
 }
 </style>

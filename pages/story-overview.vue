@@ -16,12 +16,19 @@
         <div
           v-if="checkAvailable(questionAnswer.id)"
           class="insight">
-          <h2>{{ findInsight(questionAnswer.id) }}</h2>
+          <span>!</span>
+          <div>
+            <h2>wist je dat</h2>
+            <h2>{{ findInsight(questionAnswer.id) }}</h2>
+          </div>
         </div>
       </div>
       <bigButton
         :text="'Bekijk alle weetjes'"
         :to="'/insights'"/>
+      <bigButton
+        :text="'Begin opnieuw'"
+        @click.native="resetStore()"/>
     </div>
   </section>
 </template>
@@ -58,6 +65,10 @@ export default {
     findInsight(id) {
       let find = this.json.insights.find(x => x.id === id)
       return find.insight
+    },
+    resetStore() {
+      this.$store.commit('resetStory')
+      this.$router.push('/')
     }
   }
 }
@@ -75,23 +86,32 @@ section {
   height: 100px;
   width: 100vw;
   background-color: var(--second-color);
+  // padding: 0 var(--default-padding);
+  padding-right: var(--default-padding);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 20px;
   transform: translateX(-35px);
-  h2 {
-    color: #fff;
+  h2:first-child {
+    text-transform: uppercase;
+  }
+  div {
+    max-width: 270px;
   }
 }
 .answer {
   margin-top: 20px;
 }
 .body-container {
-  padding: var(--default-padding);
+  padding: 20px var(--default-padding);
 }
 .small-header {
   margin-top: var(--default-margin);
   font-weight: bold;
+}
+span {
+  font-size: 70px;
+  margin-left: 5px;
 }
 </style>
