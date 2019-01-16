@@ -1,7 +1,17 @@
 <template>
   <section>
+    <div class="pop-up">
+      <div class="pop-up-inner">
+        <h2>Weet je zeker dat je wilt stoppen?</h2>
+        <smallButton/>
+      </div>
+    </div>
+
     <section>
-      <bigHeader :header-text="currentQuestion.question"/>
+      <bigHeader
+        :header-text="currentQuestion.question"
+        @togglePop="onClickChild"/>
+
       <div class="container">
         <div class="img-container">
           <img
@@ -32,6 +42,7 @@ import questionBullets from '~/components/questionBullets.vue'
 import answerButton from '~/components/answerButton.vue'
 import questionTimer from '~/components/questionTimer.vue'
 import resetStory from '~/components/resetStory.vue'
+import smallButton from '~/components/small/smallButton.vue'
 import bigHeader from '~/components/bigHeader.vue'
 
 export default {
@@ -45,6 +56,7 @@ export default {
     return validate
   },
   components: {
+    smallButton,
     questionBullets,
     answerButton,
     questionTimer,
@@ -78,6 +90,9 @@ export default {
   methods: {
     nextQuestion(value) {
       this.forceNext = true
+    },
+    onClickChild() {
+      console.log('test')
     }
   }
   // transition: 'bounce'
@@ -97,7 +112,7 @@ img {
 }
 
 .img-container {
-  padding: var(--default-padding);
+  padding: 0 var(--default-padding);
 }
 
 h1 {
@@ -114,5 +129,27 @@ section {
 
 .container {
   transform: translateY(-40px);
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-inner {
+    background-color: var(--black-color);
+    height: 200px;
+    width: 80%;
+    padding: var(--default-padding);
+    h2 {
+      text-align: center;
+    }
+  }
 }
 </style>

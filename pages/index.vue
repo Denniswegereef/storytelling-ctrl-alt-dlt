@@ -35,6 +35,6 @@ p {
   margin-bottom: 8rem;
 }
 .bodyContainer {
-  padding: var(--default-padding);
+  padding: 0 var(--default-padding);
 }
 </style>
