@@ -9,15 +9,19 @@
         :key="index"
         class="overview-single">
         <hr>
+        <!-- scenario -->
         <h2>{{ questionAnswer.q }}</h2>
-        <h3>Jouw antwoord</h3>
-        <h3>{{ questionAnswer.a }}</h3>
+        <p class="small-header">Jouw antwoord</p>
+        <p>{{ questionAnswer.a }}</p>
         <div
           v-if="checkAvailable(questionAnswer.id)"
           class="insight">
           <h2>{{ findInsight(questionAnswer.id) }}</h2>
         </div>
       </div>
+      <bigButton
+        :text="'Bekijk alle weetjes'"
+        :to="'/insights'"/>
     </div>
   </section>
 </template>
@@ -25,6 +29,7 @@
 <script>
 import json from 'static/insights.json'
 import smallHeader from '~/components/small/smallHeader.vue'
+import bigButton from '~/components/small/bigButton.vue'
 
 export default {
   validate({ params, store }) {
@@ -35,7 +40,8 @@ export default {
     return true
   },
   components: {
-    smallHeader
+    smallHeader,
+    bigButton
   },
   data() {
     return {
@@ -67,11 +73,13 @@ section {
 }
 .insight {
   height: 100px;
-  width: 100%;
-  background-color: red;
+  width: 100vw;
+  background-color: var(--second-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  transform: translateX(-35px);
   h2 {
     color: #fff;
   }
@@ -82,11 +90,11 @@ section {
 .body-container {
   padding: var(--default-padding);
 }
-.overview-single {
-  margin-bottom: 40px;
-}
-hr {
-  width: 100%;
-  margin: 20px 0;
+// .overview-single {
+//   margin-bottom: 40px;
+// }
+.small-header {
+  margin-top: var(--default-margin);
+  font-weight: bold;
 }
 </style>

@@ -57,6 +57,6 @@ button {
   font-size: 17px;
   font-weight: normal;
   color: var(--white-color);
-  margin-top: 20px;
+  margin-top: var(--default-margin);
 }
 </style>

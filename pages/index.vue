@@ -43,6 +43,7 @@ p {
   // padding: var(--default-padding);
   margin-top: 2rem;
   margin-bottom: 8rem;
+  font-size: 20px;
 }
 .bodyContainer {
   padding: 0 var(--default-padding);
