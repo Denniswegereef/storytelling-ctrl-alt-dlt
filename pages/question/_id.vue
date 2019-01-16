@@ -41,8 +41,6 @@
         </div>
       </div>
     </section>
-
-    <resetStory/>
   </section>
 </template>
 
