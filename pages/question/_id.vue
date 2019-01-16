@@ -1,16 +1,25 @@
 <template>
   <section>
-    <div class="pop-up">
+    <div
+      v-if="popModalState"
+      class="pop-up">
       <div class="pop-up-inner">
         <h2>Weet je zeker dat je wilt stoppen?</h2>
-        <smallButton/>
+        <div class="pop-up-button-holder">
+          <smallButton
+            :text="'Nee'"
+            @click.native="continueStory()"/>
+          <smallButton
+            :text="'Ja'"
+            @click.native="quitStory()"/>
+        </div>
       </div>
     </div>
 
     <section>
       <bigHeader
         :header-text="currentQuestion.question"
-        @togglePop="onClickChild"/>
+        @togglePop="toggleModal"/>
 
       <div class="container">
         <div class="img-container">
@@ -65,7 +74,8 @@ export default {
   },
   data() {
     return {
-      forceNext: false
+      forceNext: false,
+      popModalState: false
     }
   },
   computed: {
@@ -91,8 +101,15 @@ export default {
     nextQuestion(value) {
       this.forceNext = true
     },
-    onClickChild() {
-      console.log('test')
+    toggleModal() {
+      this.popModalState = true
+    },
+    continueStory() {
+      this.popModalState = false
+    },
+    quitStory() {
+      this.$store.commit('resetStory')
+      this.$router.push('/')
     }
   }
   // transition: 'bounce'
@@ -137,7 +154,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.73);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -146,10 +163,18 @@ section {
     background-color: var(--black-color);
     height: 200px;
     width: 80%;
-    padding: var(--default-padding);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     h2 {
       text-align: center;
+      padding-bottom: var(--default-padding);
     }
+  }
+  &-button-holder {
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

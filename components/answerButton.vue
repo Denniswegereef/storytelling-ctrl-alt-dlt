@@ -91,7 +91,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--default-padding);
+  padding: 0 var(--default-padding);
 }
 button {
   background-color: blue;

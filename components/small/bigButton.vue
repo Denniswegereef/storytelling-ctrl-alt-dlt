@@ -38,9 +38,11 @@ button {
   color: var(--black-color);
   padding: 18px 10px;
   min-height: 70px;
+  transition: all 0.2s;
 
   &:hover {
-    background-color: darkBlue;
+    transform: scale(1.1);
+    background-color: var(--default-color-dark);
   }
 }
 
