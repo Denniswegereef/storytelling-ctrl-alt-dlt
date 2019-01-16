@@ -1,6 +1,6 @@
 {
   "startMessage": "Hello welcome to the quiz",
-  "timeQuestion": 20,
+  "timeQuestion": 1000000,
   "contextScenario": [
     "Scenario 1",
     "Scenario 2",
