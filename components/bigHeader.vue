@@ -1,10 +1,10 @@
 <template lang="html">
   <header>
-    <a href="">
-      <img
-        src="../assets/images/home.png"
-        alt="home-icon">
-    </a>
+    <img
+      src="../assets/images/home.png"
+      alt="home-icon"
+      @click="onClickButton">
+
     <h2>{{ headerText }}</h2>
   </header>
 </template>
@@ -18,8 +18,8 @@ export default {
     }
   },
   methods: {
-    clickHandle() {
-      console.log(click)
+    onClickButton() {
+      this.$emit('togglePop', 'someValue')
     }
   }
 }
@@ -38,6 +38,7 @@ header {
   padding: 1.5rem;
 }
 h2 {
+  color: var(--black-color);
   margin-top: 0.5rem;
 }
 </style>
