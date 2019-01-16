@@ -3,8 +3,7 @@
     <!-- header -->
     <smallHeader :header-text="'Overzicht'"/>
     <div class="body-container">
-      <hp class="intro">Je bent klaar! Scroll verder om jouw scenario te bekijken</p>
-
+      <p class="intro">Je bent klaar! Scroll verder om jouw scenario te bekijken</p>
       <div
         v-for="(questionAnswer, index) in $store.state.questionsAnswered"
         :key="index"
