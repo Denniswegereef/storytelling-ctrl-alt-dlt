@@ -35,8 +35,8 @@ html {
 }
 
 body {
-  background-color: darkGrey;
-  /* background-color: var(--black-color); */
+  /* background-color: darkGrey; */
+  background-color: var(--black-color);
   color: var(--white-color);
 }
 

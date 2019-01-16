@@ -35,7 +35,7 @@ export default {
   validate({ params, store }) {
     // Validate if question exists otherwise send to error
     if (store.state.jsonData === 'empty') {
-      return true
+      return false
     }
     return true
   },
@@ -90,9 +90,6 @@ section {
 .body-container {
   padding: var(--default-padding);
 }
-// .overview-single {
-//   margin-bottom: 40px;
-// }
 .small-header {
   margin-top: var(--default-margin);
   font-weight: bold;

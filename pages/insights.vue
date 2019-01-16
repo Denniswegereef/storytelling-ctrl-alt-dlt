@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  margin-top: var(--default-margin);
   padding: 0 var(--default-padding);
 }
 </style>
