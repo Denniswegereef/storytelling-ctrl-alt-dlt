@@ -1,9 +1,9 @@
 <template lang="html">
   <header>
+    <!-- <img
+      src="../../assets/images/home.png"
+      alt="home-icon"> -->
     <h1>{{ headerText }}</h1>
-    <img
-      src="../../assets/images/share.png"
-      alt="home-icon">
   </header>
 </template>
 
