@@ -20,26 +20,27 @@
       <bigHeader
         :header-text="currentQuestion.question"
         @togglePop="toggleModal"/>
-
-      <div class="container">
-        <div class="img-container">
-          <img
-            :src="image"
-            alt="image">
-          <div class="timer-container">
-            <questionTimer
-              @clicked="nextQuestion"/>
+      <transition name="layout">
+        <div class="container">
+          <div class="img-container">
+            <img
+              :src="image"
+              alt="image">
+            <div class="timer-container">
+              <questionTimer
+                @clicked="nextQuestion"/>
+            </div>
+          </div>
+          <div class="question_answers">
+            <answerButton
+              :current-question="currentQuestion.question"
+              :current-id="currentQuestion.id"
+              :possible-answers="currentQuestion.possibleAnswers"
+              :next-random="nextQuestionRandom"
+              :force="forceNext"/>
           </div>
         </div>
-        <div class="question_answers">
-          <answerButton
-            :current-question="currentQuestion.question"
-            :current-id="currentQuestion.id"
-            :possible-answers="currentQuestion.possibleAnswers"
-            :next-random="nextQuestionRandom"
-            :force="forceNext"/>
-        </div>
-      </div>
+      </transition>
     </section>
   </section>
 </template>
@@ -111,7 +112,6 @@ export default {
       this.$router.push('/')
     }
   }
-  // transition: 'bounce'
 }
 </script>
 
@@ -176,5 +176,29 @@ section {
     display: flex;
     justify-content: center;
   }
+}
+
+// Layout transitions
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.5s;
+  transform: translateY(0);
+}
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+// Page transitions
+.page-enter-active,
+.page-leave-active {
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
 }
 </style>

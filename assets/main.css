@@ -1,32 +1,19 @@
-.bounce-enter-active {
-  animation: bounce-in 0.8s;
+// Layout transitions
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.bounce-leave-active {
-  animation: bounce-out 0.5s;
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+
+// Page transitions
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
 }
-@keyframes bounce-out {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
