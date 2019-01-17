@@ -30,15 +30,18 @@ img {
   width: 30px;
   height: 30px;
   z-index: 20;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 header {
   background-color: var(--default-color);
   width: 100%;
   height: 200px;
-  padding: 1.5rem;
+  padding: var(--default-padding);
 }
 h2 {
   color: var(--black-color);
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 </style>

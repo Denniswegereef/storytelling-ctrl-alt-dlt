@@ -3,10 +3,19 @@
     <popModal
       :show="showPopModal"
       @click="togglePopModal()"/>
-      
-    <div class="clickSomething">lol</div>
+
     <h1>not found</h1>
-    <nuxt-link to="/">go back</nuxt-link>
+    <img
+      src="../assets/images/404.gif"
+      alt="gif 404">
+    <!-- <nuxt-link to="/">Go to home</nuxt-link> -->
+    <!-- <bigButton
+      :text="'Go to home'"
+      :to="'/question/1'"/> -->
+    <bigButton
+      :text="'Go to home'"
+      :to="'/'"
+      @click.native="resetStore()"/>
   </section>
 </template>
 
@@ -25,7 +34,11 @@ export default {
     }
   },
   methods: {
-    togglePopModal() {}
+    togglePopModal() {},
+    resetStore() {
+      this.$store.commit('resetStory')
+      this.$router.push('/')
+    }
   }
 }
 </script>
@@ -42,5 +55,11 @@ export default {
   &:hover {
     background-color: red;
   }
+}
+img {
+  width: 100%;
+}
+section {
+  padding: 0 var(--default-padding);
 }
 </style>

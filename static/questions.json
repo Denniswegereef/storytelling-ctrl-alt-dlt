@@ -1,6 +1,6 @@
 {
   "startMessage": "Hello welcome to the quiz",
-  "timeQuestion": 1000000,
+  "timeQuestion": 20,
   "contextScenario": [
     "Scenario 1",
     "Scenario 2",
@@ -9,77 +9,373 @@
     "Scenario 6",
     "Scenario 6"
   ],
-  "questions": [
-    {
+  "questions": [{
       "id": 1,
-      "question": "Er begint een auto voor je te rijden en laat een stopsein zien je hebt geen idee waarom",
+      "question": "Je rijdt door de stad, in de auto op weg naar je werk. Je bent te laat, maar toch rijd je niet te hard. Je hebt je raam dicht en je zit alleen in de auto. ",
       "image": "test.jpg",
-      "possibleAnswers": [
-        {
-          "answer": "Je gaat meteen aan de kant van de weg staan",
+      "possibleAnswers": [{
+          "answer": "Start",
+          "goId": 10
+        }
+      ]
+    },{
+      "id": 10,
+      "question": "Een politieauto gaat voor je rijden en geeft je een stopteken. Wat doe je?",
+      "image": "test.jpg",
+      "possibleAnswers": [{
+          "answer": "Ik stop bij de eerste beste plek die veilig is",
           "goId": 101
         },
         {
-          "answer": "Je blijft doorijden, je ziet geen reden om te stoppen want je hebt niks verkeerd gerdaan",
+          "answer": "Ik stop bij de eerste beste veilige plek en begin te filmen",
           "goId": 102
         }
       ]
     },
     {
       "id": 101,
-      "question": "Je blijt in je auto zitten, de agent stapt uit en loopt naar het raam van de bestuurder En vraagt: Mag ik uw rijbewijs zien?",
+      "question": "Jullie staan beiden aan de kant van de weg, de agent stapt uit en gaat naast je auto staan. Wat doe je?",
       "image": "path/to/image",
-      "possibleAnswers": [
-        {
-          "answer": "Ja, geen probleem",
+      "possibleAnswers": [{
+          "answer": "Ik open het raam",
           "goId": 102
         },
         {
-          "answer": "Mag ik weten waarom ik mij moet legitimeren?",
-          "goId": "end"
+          "answer": "Ik wacht op instructies van de agent.",
+          "goId": 103
+        }
+      ]
+    },
+    {
+      "id": 201,
+      "question": "Jullie staan beiden aan de kant van de weg, de agent stapt uit en gaat naast je auto staan. Wat doe je?",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik open het raam",
+          "goId": 202
+        },
+        {
+          "answer": "Ik wacht op instructies van de agent",
+          "goId": 203
         }
       ]
     },
     {
       "id": 102,
-      "question": "Oke, alles in orde, bedenkt voor uw meewerking",
+      "question": "De agent zegt 'algemene controle' en vraagt om het rij- en kentekenbewijs. Wat doe je?",
       "image": "path/to/image",
-      "possibleAnswers": [
+      "possibleAnswers": [{
+          "answer": "Ik vraag eerst waarom ik aan de kant word gezet",
+          "goId": 127
+        },
         {
-          "answer": "Fijne dag verder",
+          "answer": "Ik geef direct mijn pasje en papieren",
+          "goId": 120
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "question": "De agent vraagt of u even uit de auto wil stappen.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik stap uit",
+          "goId": 102
+        },
+        {
+          "answer": "Ik doe niets verkeerd, dus geef aan dat ik niet uitstap",
+          "goId": 104
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "question": "Bij deze vorder ik u om uit te stappen. Niet meewerken betekent dat je gearresteerd kan worden.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik stap uit",
+          "goId": 102
+        },
+        {
+          "answer": "Ik vraag waarom hij mij aan de kant heeft gezet.",
           "goId": "end"
         }
       ]
     },
     {
       "id": 202,
-      "question": "Omdat ik dat vraag.",
+      "question": "De agent zegt 'algemene controle' en vraagt om het rij- en kentekenbewijs. Wat doe je?",
       "image": "path/to/image",
-      "possibleAnswers": [
-        {
-          "answer": "Ja, geen probleem",
-          "goId": 203
+      "possibleAnswers": [{
+          "answer": "Ik vraag eerst waarom ik aan de kant word gezet",
+          "goId": 207
         },
         {
-          "answer": "Mag ik weten waarom ik mij moet legitimeren?",
-          "goId": 1
+          "answer": "Ik geef direct mijn pasje en papieren",
+          "goId": 204
         }
       ]
     },
     {
       "id": 203,
-      "question": "Oke, alles in orde, bedenkt voor uw meewerking",
+      "question": "De agent vraagt of u even uit de auto wil stappen.",
       "image": "path/to/image",
-      "possibleAnswers": [
-        {
-          "answer": "Leeg antwoord",
-          "goId": 1
+      "possibleAnswers": [{
+          "answer": "Ik stap uit",
+          "goId": 202
         },
         {
-          "answer": "Leeg antwoord",
-          "goId": 1
+          "answer": "Ik zeg dat ik niets verkeerd deed en vraag waarom ik uit moet stappen",
+          "goId": 209
         }
       ]
+    },
+    {
+      "id": 209,
+      "question": "Bij deze vorder ik u om uit te stappen. Niet meewerken betekent dat je gearresteerd kan worden.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik stap uit",
+          "goId": 202
+        },
+        {
+          "answer": "Ik vraag waarom hij mij aan de kant heeft gezet",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "question": "De agent scant je rijbewijs, vervolgens vraagt hij of hij ook in de kofferbak mag kijken.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik doe de kofferbak voor hem open",
+          "goId": 124
+        },
+        {
+          "answer": "Ik blijf rustig en zeg dat ik geen toestemming geef",
+          "goId": 122
+        }
+      ]
+    },
+    {
+      "id": 204,
+      "question": "De agent vraagt of je wil stoppen met filmen, zodat jullie beter kunnen praten, wat doe je?",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik leg mijn camera weg",
+          "goId": 120
+        },
+        {
+          "answer": "Ik blijf de agent filmen ",
+          "goId": "random",
+          "randomId": [205, 206],
+          "changes": [50, 100]
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "question": "De agent zegt dat hij je auto ook even op het politiebureau kan doorzoeken, als je dat fijner vindt. Wat doe je?",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik doe de kofferbak open",
+          "goId": 124
+        },
+        {
+          "answer": "Ik zeg dat hij het niet mag vorderen, en ik geef nog steeds geen toestemming",
+          "goId": "random",
+          "randomId": [125, 126],
+          "changes": [50, 100]
+        }
+      ]
+    },
+    {
+      "id": 205,
+      "question": "De agent vordert dat de camera uit moet, niet meewerken leidt tot een arrestatie.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik leg mijn camera weg",
+          "goId": 120
+        },
+        {
+          "answer": "Ik weiger en blijf filmen",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 206,
+      "question": "De agent scant je rijbewijs, vervolgens vraagt hij of hij ook in de kofferbak mag kijken",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik doe de kofferbak voor hem open",
+          "goId": 224
+        },
+        {
+          "answer": "Ik blijf rustig en zeg dat ik geen toestemming geef",
+          "goId": 225
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "question": "De agent kijkt in de kofferbak, bedankt je voor je medewerking en gaat weer terug naar zijn auto.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 125,
+      "question": "De agent vordert dat je de kofferbak moet openen. Niet meewerken betekent dat je gearresteerd kan worden.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik doe de kofferbak voor hem open",
+          "goId": 124
+        },
+        {
+          "answer": "Ik geef geen toestemming",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "question": "De agent kijkt niet in de kofferbak en gaat weer terug naar zijn auto.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 207,
+      "question": "De agent zegt dat hij een algemene controle houdt op grond van artikel 160 Wegenverkeerswet en vraagt nogmaals om je rijbewijs.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik geef direct mijn pasje en papieren",
+          "goId": 206
+        },
+        {
+          "answer": "Ik zeg dat hij dat recht heeft, maar vraag waarom hij mij heeft uitgekozen voor een controle",
+          "goId": 208
+        }
+      ]
+    },
+    {
+      "id": 225,
+      "question": "De agent zegt dat hij je auto ook even op het politiebureau kan doorzoeken, als je dat fijner vindt. Wat doe je?",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik doe de kofferbak open",
+          "goId": 124
+        },
+        {
+          "answer": "Ik zeg dat hij het niet mag vorderen, en ik geef nog steeds geen toestemming",
+          "goId": "random",
+          "randomId": [226, 227],
+          "changes": [50, 100]
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "question": "De agent zegt dat hij een algemene controle houdt op grond van artikel 160 Wegenverkeerswet en vraagt nogmaals om je rijbewijs.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik geef direct mijn pasje en papieren",
+          "goId": 120
+        },
+        {
+          "answer": "Ik zeg dat hij dat recht heeft, maar vraag waarom hij mij heeft uitgekozen voor een controle",
+          "goId": 128
+        }
+      ]
+    },
+    {
+      "id": 208,
+      "question": "De agent zegt dat hij nu het rijbewijs vordert. Niet meewerken betekent dat je gearresteerd kan worden.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik geef direct mijn pasje en papieren",
+          "goId": 206
+        },
+        {
+          "answer": "Ik vraag nog een keer waarom hij mij stopt",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 224,
+      "question": "De agent kijkt in de kofferbak, bedankt je voor je medewerking en gaat weer terug naar zijn auto. Je hebt gefilmd en kan dus een klacht indienen over het optreden van de agent.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 226,
+      "question": "De agent vordert dat je de kofferbak moet openen. Niet meewerken betekent dat je gearresteerd kan worden.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik doe de kofferbak voor hem open",
+          "goId": 228
+        },
+        {
+          "answer": "Ik geef geen toestemming",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 227,
+      "question": "De agent kijkt niet in de kofferbak. Hij bedankt je voor de medewerking en beëindigt de controle.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 226,
+      "question": "De agent vordert dat je de kofferbak moet openen. Niet meewerken betekent dat je gearresteerd kan worden.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik doe de kofferbak voor hem open",
+          "goId": 228
+        },
+        {
+          "answer": "Ik geef geen toestemming",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "question": "De agent zegt dat hij nu het rijbewijs vordert. Niet meewerken betekent dat je gearresteerd kan worden.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+          "answer": "Ik geef direct mijn pasje en papieren",
+          "goId": 120
+        },
+        {
+          "answer": "Ik vraag nog een keer waarom hij mij stopt",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 228,
+      "question": "De agent kijkt in de kofferbak maar vindt niets. Hij bedankt je voor de medewerking en beëindigt de controle",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
     }
   ]
 }

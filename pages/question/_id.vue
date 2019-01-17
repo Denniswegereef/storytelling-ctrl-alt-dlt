@@ -93,6 +93,7 @@ export default {
     },
     image() {
       return require(`~/assets/images/1.jpg`)
+      // return require(`~/assets/images/${this.currentQuestion.id}.gif`)
     }
   },
   methods: {
@@ -143,7 +144,7 @@ section {
 }
 
 .container {
-  transform: translateY(-40px);
+  transform: translateY(-30px);
 }
 
 .pop-up {
@@ -165,6 +166,7 @@ section {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    border-radius: 7px;
     h2 {
       text-align: center;
       padding-bottom: var(--default-padding);

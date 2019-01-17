@@ -1,0 +1,85 @@
+{
+  "startMessage": "Hello welcome to the quiz",
+  "timeQuestion": 1000000,
+  "contextScenario": [
+    "Scenario 1",
+    "Scenario 2",
+    "Scenario 3",
+    "Scenario 4",
+    "Scenario 6",
+    "Scenario 6"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Er begint een auto voor je te rijden en laat een stopsein zien je hebt geen idee waarom",
+      "image": "test.jpg",
+      "possibleAnswers": [
+        {
+          "answer": "Je gaat meteen aan de kant van de weg staan",
+          "goId": 101
+        },
+        {
+          "answer": "Je blijft doorijden, je ziet geen reden om te stoppen want je hebt niks verkeerd gerdaan",
+          "goId": 102
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "question": "Je blijt in je auto zitten, de agent stapt uit en loopt naar het raam van de bestuurder En vraagt: Mag ik uw rijbewijs zien?",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Ja, geen probleem",
+          "goId": 102
+        },
+        {
+          "answer": "Mag ik weten waarom ik mij moet legitimeren?",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "question": "Oke, alles in orde, bedenkt voor uw meewerking",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Fijne dag verder",
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 202,
+      "question": "Omdat ik dat vraag.",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Ja, geen probleem",
+          "goId": 203
+        },
+        {
+          "answer": "Mag ik weten waarom ik mij moet legitimeren?",
+          "goId": 1
+        }
+      ]
+    },
+    {
+      "id": 203,
+      "question": "Oke, alles in orde, bedenkt voor uw meewerking",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Leeg antwoord",
+          "goId": 1
+        },
+        {
+          "answer": "Leeg antwoord",
+          "goId": 1
+        }
+      ]
+    }
+  ]
+}
