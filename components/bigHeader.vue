@@ -4,7 +4,6 @@
       src="../assets/images/home.png"
       alt="home-icon"
       @click="onClickButton">
-
     <h2>{{ headerText }}</h2>
   </header>
 </template>

@@ -1,9 +1,10 @@
 <template lang="html">
   <header>
-    <!-- <img
-      src="../../assets/images/home.png"
-      alt="home-icon"> -->
     <h1>{{ headerText }}</h1>
+    <img
+      src="../../assets/images/share.png"
+      alt="share-icon"
+      @click="onClickButton">
   </header>
 </template>
 
@@ -18,6 +19,9 @@ export default {
   methods: {
     clickHandle() {
       console.log(click)
+    },
+    onClickButton() {
+      this.$emit('togglePop', 'someValue')
     }
   }
 }
@@ -36,7 +40,7 @@ header {
   padding: 1.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: right;
   align-items: center;
 }
 h1 {
@@ -44,5 +48,7 @@ h1 {
   width: 100%;
   // transform: translateY(-30px);
   text-transform: uppercase;
+  position: absolute;
+  left: 0;
 }
 </style>
