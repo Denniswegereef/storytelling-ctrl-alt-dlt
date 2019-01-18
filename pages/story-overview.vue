@@ -109,21 +109,30 @@ section {
   margin-bottom: 20px;
 }
 .insight {
-  height: 100px;
-  width: 100vw;
+  min-height: 100px;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
   background-color: var(--second-color);
   // padding: 0 var(--default-padding);
   padding-right: var(--default-padding);
   display: flex;
   align-items: center;
-  justify-content: space-around;
   margin-top: 20px;
-  transform: translateX(-35px);
+  overflow: hidden;
+
+  // transform: translateX(-35px);
+  h2 {
+    margin-left: var(--default-padding);
+  }
   h2:first-child {
     text-transform: uppercase;
   }
   div {
     max-width: 270px;
+  }
+  span {
+    margin-left: var(--default-padding);
   }
 }
 .answer {
@@ -177,7 +186,7 @@ span {
     content: '';
     position: absolute;
     width: 200%;
-    height: 200%;
+    height: 250%;
     transform: rotate(30deg);
     background: rgba(255, 255, 255, 0.13);
     // animation-property: left, top, opacity;
@@ -194,8 +203,8 @@ span {
   }
   &:hover:after {
     opacity: 1;
-    top: 90%;
-    left: 90%;
+    top: 110%;
+    left: 110%;
   }
 }
 
@@ -208,25 +217,16 @@ span {
     opacity: 1;
     top: -110%;
     left: -210%;
-    transition-property: left, top, opacity;
-    transition-duration: 0.7s, 0.7s, 0.15s;
-    transition-timing-function: ease;
   }
   70% {
     opacity: 1;
     top: -110%;
     left: -210%;
-    transition-property: left, top, opacity;
-    transition-duration: 0.7s, 0.7s, 0.15s;
-    transition-timing-function: ease;
   }
   100% {
     opacity: 1;
     top: 90%;
     left: 90%;
-    transition-property: left, top, opacity;
-    transition-duration: 0.7s, 0.7s, 0.15s;
-    transition-timing-function: ease;
   }
 }
 </style>
