@@ -5,7 +5,8 @@
       v-if="popModalState"
       class="pop-up">
       <div class="pop-up-inner">
-        <h2>Hoe wil je de app delen?</h2>
+        <h2>Share</h2>
+        <p>{{ currentInsight }}</p>
         <div class="icon-container">
           <div>
             <img
@@ -60,7 +61,8 @@
               <h2>{{ findInsight(questionAnswer.id) }}</h2>
               <img
                 src="../assets/images/share.png"
-                alt="share-icon">
+                alt="share-icon"
+                @click="shareInsight(findInsight(questionAnswer.id))">
             </div>
           </div>
           <!-- einde scenario -->
@@ -71,7 +73,8 @@
         :text="'Begin opnieuw'"
         @click.native="resetStore()"/>
       <bigButton
-        :text="'Deel de app'"/>
+        :text="'Deel de app'"
+        @click.native="shareApp('Deel de app met al je vrienden en familie')"/>
     </div>
   </section>
 </template>
@@ -98,7 +101,8 @@ export default {
   data() {
     return {
       json,
-      popModalState: false
+      popModalState: false,
+      currentInsight: ''
     }
   },
   methods: {
@@ -112,6 +116,7 @@ export default {
       this.popModalState = true
     },
     goBack() {
+      this.currentInsight = ''
       this.popModalState = false
     },
     findInsight(id) {
@@ -121,6 +126,15 @@ export default {
     resetStore() {
       this.$store.commit('resetStory')
       this.$router.push('/')
+    },
+    shareInsight(insight) {
+      this.currentInsight = insight
+      this.popModalState = true
+      console.log(insight)
+    },
+    shareApp(text) {
+      this.popModalState = true
+      this.currentInsight = text
     }
   }
 }
@@ -138,7 +152,7 @@ section {
   min-height: 100px;
   padding: 10px 0;
   position: relative;
-  width: 100vw;
+  width: calc(100% + 70px);
   left: 0;
   background-color: var(--second-color);
   // padding: 0 var(--default-padding);
@@ -195,16 +209,22 @@ span {
   justify-content: center;
   &-inner {
     background-color: var(--black-color);
-    height: 200px;
+    min-height: 200px;
     width: 80%;
+    max-width: 450px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     border-radius: 7px;
+    padding: 20px;
     h2 {
       text-align: center;
       margin-bottom: var(--default-margin);
+    }
+    p {
+      padding: 0;
+      margin-bottom: 10px;
     }
   }
   &-button-holder {
@@ -220,7 +240,7 @@ span {
     content: '';
     position: absolute;
     width: 200%;
-    height: 250%;
+    height: 300%;
     transform: rotate(30deg);
     background: rgba(255, 255, 255, 0.13);
     // animation-property: left, top, opacity;
@@ -249,18 +269,18 @@ span {
 @keyframes shine {
   0% {
     opacity: 1;
-    top: -110%;
+    top: -100%;
     left: -210%;
   }
   70% {
     opacity: 1;
-    top: -110%;
+    top: -100%;
     left: -210%;
   }
   100% {
     opacity: 1;
     top: 90%;
-    left: 90%;
+    left: 110%;
   }
 }
 
