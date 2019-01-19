@@ -38,6 +38,7 @@ header {
   width: 100%;
   height: 200px;
   padding: var(--default-padding);
+  position: relative;
 }
 h2 {
   color: var(--black-color);

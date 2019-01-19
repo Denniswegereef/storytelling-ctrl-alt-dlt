@@ -23,18 +23,20 @@
         v-for="(questionAnswer, index) in $store.state.questionsAnswered"
         :key="index"
         class="overview-single">
-        <hr>
-        <!-- scenario -->
-        <h2>{{ questionAnswer.q }}</h2>
-        <p class="small-header">Jouw antwoord</p>
-        <p>{{ questionAnswer.a }}</p>
-        <div
-          v-if="checkAvailable(questionAnswer.id)"
-          class="insight">
-          <span>!</span>
-          <div>
-            <h2>wist je dat</h2>
-            <h2>{{ findInsight(questionAnswer.id) }}</h2>
+        <div v-if="checkAvailable(questionAnswer.id)">
+          <hr>
+          <!-- scenario -->
+          <h2>{{ questionAnswer.q }}</h2>
+          <p class="small-header">Jouw antwoord</p>
+          <p>{{ questionAnswer.a }}</p>
+          <div
+            v-if="checkAvailable(questionAnswer.id)"
+            class="insight shine">
+            <span>!</span>
+            <div>
+              <h2>wist je dat</h2>
+              <h2>{{ findInsight(questionAnswer.id) }}</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -107,21 +109,30 @@ section {
   margin-bottom: 20px;
 }
 .insight {
-  height: 100px;
-  width: 100vw;
+  min-height: 100px;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
   background-color: var(--second-color);
   // padding: 0 var(--default-padding);
   padding-right: var(--default-padding);
   display: flex;
   align-items: center;
-  justify-content: space-around;
   margin-top: 20px;
-  transform: translateX(-35px);
+  overflow: hidden;
+
+  // transform: translateX(-35px);
+  h2 {
+    margin-left: var(--default-padding);
+  }
   h2:first-child {
     text-transform: uppercase;
   }
   div {
     max-width: 270px;
+  }
+  span {
+    margin-left: var(--default-padding);
   }
 }
 .answer {
@@ -166,6 +177,56 @@ span {
   &-button-holder {
     display: flex;
     justify-content: center;
+  }
+}
+
+.shine {
+  overflow: hidden;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 250%;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    // animation-property: left, top, opacity;
+    animation-duration: 0.7s, 0.7s, 0.15s;
+    animation-timing-function: ease;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shine 7s infinite;
+  }
+  &:hover:after {
+    opacity: 1;
+    top: 110%;
+    left: 110%;
+  }
+}
+
+.shine:active:after {
+  opacity: 0;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 1;
+    top: -110%;
+    left: -210%;
+  }
+  70% {
+    opacity: 1;
+    top: -110%;
+    left: -210%;
+  }
+  100% {
+    opacity: 1;
+    top: 90%;
+    left: 90%;
   }
 }
 </style>
