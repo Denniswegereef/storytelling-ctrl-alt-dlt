@@ -209,7 +209,7 @@
       "question": "De agent scant je rijbewijs, vervolgens vraagt hij of hij ook in de kofferbak mag kijken",
       "image": "path/to/image",
       "possibleAnswers": [{
-          "answer": "Ik doe de kofferbak voor hem open",
+          "answer": "Ik doe de kofferbak open",
           "goId": 224
         },
         {
@@ -232,7 +232,7 @@
       "question": "De agent vordert dat je de kofferbak moet openen. Niet meewerken betekent dat je gearresteerd kan worden.",
       "image": "path/to/image",
       "possibleAnswers": [{
-          "answer": "Ik doe de kofferbak voor hem open",
+          "answer": "Ik doe de kofferbak open",
           "goId": 124
         },
         {

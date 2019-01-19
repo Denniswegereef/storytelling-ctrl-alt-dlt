@@ -2,7 +2,11 @@
   "insights": [
     {
       "id": 1,
-      "insight": "dit is een leuk weetje. blabla bla ik ben zoo interessant je hebt geen idee."
+      "insight": "Het filmen van een agent is toegestaan zolang je hun werk niet belemmert."
+    },
+    {
+      "id": 101,
+      "insight": "Jij stopte op een veilige plek"
     }
   ]
 }
