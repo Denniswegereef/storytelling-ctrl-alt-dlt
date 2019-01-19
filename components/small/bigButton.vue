@@ -17,7 +17,7 @@ export default {
     },
     to: {
       type: String,
-      default: '/'
+      default: ''
     },
     buttonType: {
       type: String,
@@ -49,7 +49,7 @@ button {
 .default {
   background-color: black;
   background-color: var(--default-color);
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 .answer-button {

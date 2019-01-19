@@ -5,7 +5,29 @@
       v-if="popModalState"
       class="pop-up">
       <div class="pop-up-inner">
-        <h2>Hoe wil je je resultaten delen?</h2>
+        <h2>Hoe wil je de app delen?</h2>
+        <div class="icon-container">
+          <div>
+            <img
+              src="../assets/images/facebook.png"
+              alt="facebook-icon">
+          </div>
+          <div>
+            <img
+              src="../assets/images/snapchat.png"
+              alt="facebook-icon">
+          </div>
+          <div>
+            <img
+              src="../assets/images/twitter.png"
+              alt="facebook-icon">
+          </div>
+          <div>
+            <img
+              src="../assets/images/whatsapp.png"
+              alt="facebook-icon">
+          </div>
+        </div>
         <div class="pop-up-button-holder">
           <smallButton
             :text="'Annuleer'"
@@ -36,16 +58,20 @@
             <div>
               <h2>wist je dat</h2>
               <h2>{{ findInsight(questionAnswer.id) }}</h2>
+              <img
+                src="../assets/images/share.png"
+                alt="share-icon">
             </div>
           </div>
+          <!-- einde scenario -->
         </div>
       </div>
-      <bigButton
-        :text="'Bekijk alle weetjes'"
-        :to="'/insights'"/>
+      <hr>
       <bigButton
         :text="'Begin opnieuw'"
         @click.native="resetStore()"/>
+      <bigButton
+        :text="'Deel de app'"/>
     </div>
   </section>
 </template>
@@ -112,15 +138,22 @@ section {
   min-height: 100px;
   padding: 10px 0;
   position: relative;
-  width: 100%;
+  width: 100vw;
+  left: 0;
   background-color: var(--second-color);
   // padding: 0 var(--default-padding);
   padding-right: var(--default-padding);
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: var(--default-margin);
+  margin-left: -35px;
   overflow: hidden;
-
+  img {
+    width: 29px;
+    position: absolute;
+    right: 13px;
+    top: 10px;
+  }
   // transform: translateX(-35px);
   h2 {
     margin-left: var(--default-padding);
@@ -171,12 +204,13 @@ span {
     border-radius: 7px;
     h2 {
       text-align: center;
-      padding-bottom: var(--default-padding);
+      margin-bottom: var(--default-margin);
     }
   }
   &-button-holder {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
   }
 }
 
@@ -227,6 +261,31 @@ span {
     opacity: 1;
     top: 90%;
     left: 90%;
+  }
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  div {
+    background-color: var(--second-color);
+    border-radius: 7px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    :hover {
+      background-color: var(--second-color-dark);
+    }
+    img {
+      width: 70%;
+    }
   }
 }
 </style>

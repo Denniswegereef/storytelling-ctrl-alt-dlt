@@ -42,7 +42,7 @@ body {
 
 .screen {
   /* border: 1px solid red; */
-  /* height: 400px; */
+  height: 100vh;
   /* width: 800px; */
   /* padding: 20px 10px; */
   margin: 0 auto;

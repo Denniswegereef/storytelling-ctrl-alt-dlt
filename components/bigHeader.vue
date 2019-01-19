@@ -36,12 +36,16 @@ img {
 header {
   background-color: var(--default-color);
   width: 100%;
-  height: 200px;
+  height: 230px;
   padding: var(--default-padding);
   position: relative;
+  display: flex;
 }
 h2 {
   color: var(--black-color);
   margin-top: 1rem;
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 </style>
