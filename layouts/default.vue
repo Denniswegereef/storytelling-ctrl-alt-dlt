@@ -47,6 +47,6 @@ body {
 }
 
 .bodyContainer .default {
-  margin-bottom: 50px;
+  margin-top: -10px;
 }
 </style>

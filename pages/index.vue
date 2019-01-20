@@ -46,8 +46,6 @@ p {
   font-size: 20px;
 }
 .bodyContainer {
-  position: absolute;
-  bottom: 0;
   padding: 0 var(--default-padding);
 }
 .container {
