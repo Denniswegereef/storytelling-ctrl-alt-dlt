@@ -5,7 +5,7 @@
       v-if="popModalState"
       class="pop-up">
       <div class="pop-up-inner">
-        <h2>Share</h2>
+        <h2>Delen</h2>
         <p>{{ currentInsight }}</p>
         <div class="icon-container">
           <div>
@@ -217,14 +217,14 @@ span {
     flex-direction: column;
     justify-content: center;
     border-radius: 7px;
-    padding: 20px;
+    padding: 30px;
     h2 {
       text-align: center;
       margin-bottom: var(--default-margin);
     }
     p {
       padding: 0;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
   }
   &-button-holder {
@@ -289,7 +289,7 @@ span {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   div {

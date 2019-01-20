@@ -13,5 +13,16 @@ hr {
   body {
     max-width: 750px;
     margin: 0 auto;
+    .bodyContainer {
+      max-width: 750px;
+    }
   }
 }
+
+body {
+  height: 93vh;
+}
+// 
+// .container {
+//   height: 93vh;
+// }

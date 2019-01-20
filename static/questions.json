@@ -10,16 +10,16 @@
     "Scenario 6"
   ],
   "questions": [{
-      "id": 1,
+      "id": 10,
       "question": "Je rijdt door de stad, in de auto op weg naar je werk. Je bent te laat, maar toch rijd je niet te hard. Je hebt je raam dicht en je zit alleen in de auto. ",
       "image": "test.jpg",
       "possibleAnswers": [{
           "answer": "Start",
-          "goId": 10
+          "goId": 1
         }
       ]
     },{
-      "id": 10,
+      "id": 1,
       "question": "Een politieauto gaat voor je rijden en geeft je een stopteken. Wat doe je?",
       "image": "test.jpg",
       "possibleAnswers": [{

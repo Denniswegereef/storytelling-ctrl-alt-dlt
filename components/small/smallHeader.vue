@@ -1,10 +1,10 @@
 <template lang="html">
   <header>
     <h1>{{ headerText }}</h1>
-    <img
+    <!-- <img
       src="../../assets/images/share.png"
       alt="share-icon"
-      @click="onClickButton">
+      @click="onClickButton"> -->
   </header>
 </template>
 
@@ -19,9 +19,6 @@ export default {
   methods: {
     clickHandle() {
       console.log(click)
-    },
-    onClickButton() {
-      this.$emit('togglePop', 'someValue')
     }
   }
 }

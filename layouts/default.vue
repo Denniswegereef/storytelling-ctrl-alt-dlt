@@ -41,11 +41,12 @@ body {
 }
 
 .screen {
-  /* border: 1px solid red; */
-  height: 100vh;
-  /* width: 800px; */
-  /* padding: 20px 10px; */
+  height: 93vh;
   margin: 0 auto;
   /* margin-top: 50px; */
+}
+
+.bodyContainer .default {
+  margin-bottom: 50px;
 }
 </style>

@@ -2,11 +2,39 @@
   "insights": [
     {
       "id": 1,
-      "insight": "Het filmen van een agent is toegestaan zolang je hun werk niet belemmert."
+      "insight": "Filmen van agenten is toegestaan zolang je hun werk niet belemmert."
     },
     {
-      "id": 101,
-      "insight": "Jij stopte op een veilige plek"
+      "id": 225,
+      "insight": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen."
+    },
+    {
+      "id": 122,
+      "insight": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen."
+    },
+    {
+      "id": 201,
+      "insight": "Filmen en het raam dicht laten is niet strafbaar."
+    },
+    {
+      "id": 102,
+      "insight": "De agent voert een onderzoek uit op grond van de wegenverkeerswet. Je moet je rijbewijs laten zien."
+    },
+    {
+      "id": 202,
+      "insight": "De agent voert een onderzoek uit op grond van de wegenverkeerswet. Je moet je rijbewijs laten zien."
+    },
+    {
+      "id": 120,
+      "insight": "Als een agent vraagt of hij in je kofferbak mag kijken mag je nee zeggen."
+    },
+    {
+      "id": 206,
+      "insight": "Als een agent vraagt of hij in je kofferbak mag kijken mag je nee zeggen."
+    },
+    {
+      "id": 205,
+      "insight": "Een agent mag nooit vorderen dat er niet gefilmd mag worden. Doet hij dit wel dan is dat machtsmisbruik."
     }
   ]
 }
