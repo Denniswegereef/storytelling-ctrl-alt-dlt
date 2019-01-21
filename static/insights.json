@@ -2,7 +2,7 @@
   "insights": [
     {
       "id": 1,
-      "insight": "Filmen van agenten is toegestaan zolang je hun werk niet belemmert."
+      "insight": "Het filmen van agenten is toegestaan zolang je hun werk niet belemmert. Als je filmt en de agent maakt misbruik van zijn macht heb je daar bewijs van."
     },
     {
       "id": 225,
@@ -26,15 +26,23 @@
     },
     {
       "id": 120,
-      "insight": "Als een agent vraagt of hij in je kofferbak mag kijken mag je nee zeggen."
+      "insight": "Als een agent vraagt of hij in je kofferbak mag kijken mag je nee zeggen, tenzij je wordt verdacht van een strafbaar feit."
     },
     {
       "id": 206,
-      "insight": "Als een agent vraagt of hij in je kofferbak mag kijken mag je nee zeggen."
+      "insight": "Als een agent vraagt of hij in je kofferbak mag kijken mag je nee zeggen, tenzij je wordt verdacht van een strafbaar feit."
     },
     {
       "id": 205,
       "insight": "Een agent mag nooit vorderen dat er niet gefilmd mag worden. Doet hij dit wel dan is dat machtsmisbruik."
+    },
+    {
+      "id": 203,
+      "insight": "Als je je raam niet open doet en dus geen contact maakt met de agent en ook de agent filmt, geef je hem twee redenen om geïriteerd te zijn."
+    },
+    {
+      "id": 209,
+      "insight": "Als een agent vervolgens vordert dat je uitstapt en je werkt nog steeds niet mee, word je gearresteerd vanwege niet voldoen aan ambtelijk bevel."
     }
   ]
 }

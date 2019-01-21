@@ -41,13 +41,14 @@
       :header-text="'Overzicht'"
       @togglePop="toggleModal"/>
     <div class="body-container">
-      <p class="intro">Je bent klaar! Scroll verder om jouw scenario te bekijken</p>
+      <!-- <p class="intro">Je bent klaar! Scroll verder om jouw scenario te bekijken</p> -->
+      <!-- <hr> -->
       <div
         v-for="(questionAnswer, index) in $store.state.questionsAnswered"
         :key="index"
         class="overview-single">
         <div v-if="checkAvailable(questionAnswer.id)">
-          <hr>
+
           <!-- scenario -->
           <h2>{{ questionAnswer.q }}</h2>
           <p class="small-header">Jouw antwoord</p>
@@ -65,10 +66,11 @@
                 @click="shareInsight(findInsight(questionAnswer.id))">
             </div>
           </div>
+          <hr>
           <!-- einde scenario -->
         </div>
       </div>
-      <hr>
+      <!-- <hr> -->
       <bigButton
         :text="'Begin opnieuw'"
         @click.native="resetStore()"/>
@@ -301,6 +303,9 @@ span {
     align-items: center;
     justify-content: center;
     :hover {
+      background-color: var(--second-color-dark);
+    }
+    :active {
       background-color: var(--second-color-dark);
     }
     img {

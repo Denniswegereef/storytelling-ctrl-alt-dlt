@@ -56,5 +56,8 @@ p {
   &:hover {
     background-color: grey;
   }
+  &:active {
+    background-color: grey;
+  }
 }
 </style>

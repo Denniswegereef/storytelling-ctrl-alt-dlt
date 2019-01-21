@@ -1,8 +1,13 @@
 <template>
   <section class="container">
-    <h1>Mag ik ook nee zeggen?</h1>
+    <div class="logo-container">
+      <img
+        src="../assets/images/logo.gif"
+        alt="logo">
+    </div>
+    <!-- <h1>Mag ik ook nee zeggen?</h1> -->
     <div class="bodyContainer">
-      <p>Welkom bij Mag Ik Ook Nee Zeggen. <br> Hier ga je door een verhaal, waar jij bepaalt wat er gebeurt. Je komt er achter hoe het is om als burger staande gehouden worden en snel te moeten reageren op verschillende situaties.</p>
+      <p>Ben jij je bewust van je rechten bij een staande houding als automobilist? Hoe brengt jij het er vanaf?</p>
       <bigButton
         :text="'start'"
         :to="'/question/1'"/>
@@ -50,5 +55,14 @@ p {
 }
 .container {
   height: 93vh;
+}
+.logo-container {
+  width: 100%;
+  // background-color: var(--default-color);
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  img {
+    width: 100%;
+  }
 }
 </style>

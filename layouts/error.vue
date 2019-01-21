@@ -52,6 +52,9 @@ export default {
   right: 40px;
   background-color: green;
   cursor: pointer;
+  &:active {
+    background-color: red;
+  }
   &:hover {
     background-color: red;
   }

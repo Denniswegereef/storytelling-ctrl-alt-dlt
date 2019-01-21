@@ -23,9 +23,10 @@ button {
   font-weight: bold;
   border-style: none;
   border-radius: 7px;
+  text-transform: uppercase;
   color: var(--black-color);
   min-height: 30px;
-  width: 100px;
+  width: 125px;
   background-color: var(--default-color);
   margin: 0 10px;
   transition: all 0.2s;

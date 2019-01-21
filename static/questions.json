@@ -98,7 +98,7 @@
         },
         {
           "answer": "Ik vraag waarom hij mij aan de kant heeft gezet.",
-          "goId": "end"
+          "goId": 105
         }
       ]
     },
@@ -132,7 +132,7 @@
     },
     {
       "id": 209,
-      "question": "Bij deze vorder ik u om uit te stappen. Niet meewerken betekent dat je gearresteerd kan worden.",
+      "question": "'Bij deze vorder ik u om uit te stappen. Niet meewerken betekent dat je gearresteerd kan worden.'",
       "image": "path/to/image",
       "possibleAnswers": [{
           "answer": "Ik stap uit",
@@ -140,7 +140,7 @@
         },
         {
           "answer": "Ik vraag waarom hij mij aan de kant heeft gezet",
-          "goId": "end"
+          "goId": 210
         }
       ]
     },
@@ -167,7 +167,7 @@
           "goId": 120
         },
         {
-          "answer": "Ik blijf de agent filmen ",
+          "answer": "Ik blijf de agent filmen",
           "goId": "random",
           "randomId": [205, 206],
           "changes": [50, 100]
@@ -183,7 +183,7 @@
           "goId": 124
         },
         {
-          "answer": "Ik zeg dat hij het niet mag vorderen, en ik geef nog steeds geen toestemming",
+          "answer": "Ik zeg dat hij het niet mag vorderen en ik geef nog steeds geen toestemming",
           "goId": "random",
           "randomId": [125, 126],
           "changes": [50, 100]
@@ -200,7 +200,7 @@
         },
         {
           "answer": "Ik weiger en blijf filmen",
-          "goId": "end"
+          "goId": 211
         }
       ]
     },
@@ -219,15 +219,6 @@
       ]
     },
     {
-      "id": 124,
-      "question": "De agent kijkt in de kofferbak, bedankt je voor je medewerking en gaat weer terug naar zijn auto.",
-      "image": "path/to/image",
-      "possibleAnswers": [{
-        "answer": "Klaar",
-        "goId": "end"
-      }]
-    },
-    {
       "id": 125,
       "question": "De agent vordert dat je de kofferbak moet openen. Niet meewerken betekent dat je gearresteerd kan worden.",
       "image": "path/to/image",
@@ -237,18 +228,9 @@
         },
         {
           "answer": "Ik geef geen toestemming",
-          "goId": "end"
+          "goId": 129
         }
       ]
-    },
-    {
-      "id": 126,
-      "question": "De agent kijkt niet in de kofferbak en gaat weer terug naar zijn auto.",
-      "image": "path/to/image",
-      "possibleAnswers": [{
-        "answer": "Klaar",
-        "goId": "end"
-      }]
     },
     {
       "id": 207,
@@ -304,13 +286,13 @@
         },
         {
           "answer": "Ik vraag nog een keer waarom hij mij stopt",
-          "goId": "end"
+          "goId": 230
         }
       ]
     },
     {
       "id": 224,
-      "question": "De agent kijkt in de kofferbak, bedankt je voor je medewerking en gaat weer terug naar zijn auto. Je hebt gefilmd en kan dus een klacht indienen over het optreden van de agent.",
+      "question": "De agent kijkt in de kofferbak maar vindt niets. Hij bedankt je voor de medewerking en beëindigt de controle.De agent mag niet vorderen dat hij in je kofferbak wil kijken. Hij maakt misbruik van zijn macht.",
       "image": "path/to/image",
       "possibleAnswers": [{
         "answer": "Klaar",
@@ -327,32 +309,18 @@
         },
         {
           "answer": "Ik geef geen toestemming",
-          "goId": "end"
+          "goId": 229
         }
       ]
     },
     {
       "id": 227,
-      "question": "De agent kijkt niet in de kofferbak. Hij bedankt je voor de medewerking en beëindigt de controle.",
+      "question": "De agent kijkt niet in de kofferbak. Hij bedankt je voor de medewerking en beëindigt de controle. De agent mag niet vorderen dat hij in je kofferbak wil kijken. Hij maakt misbruik van zijn macht.",
       "image": "path/to/image",
       "possibleAnswers": [{
         "answer": "Klaar",
         "goId": "end"
       }]
-    },
-    {
-      "id": 226,
-      "question": "De agent vordert dat je de kofferbak moet openen. Niet meewerken betekent dat je gearresteerd kan worden.",
-      "image": "path/to/image",
-      "possibleAnswers": [{
-          "answer": "Ik doe de kofferbak voor hem open",
-          "goId": 228
-        },
-        {
-          "answer": "Ik geef geen toestemming",
-          "goId": "end"
-        }
-      ]
     },
     {
       "id": 128,
@@ -364,13 +332,92 @@
         },
         {
           "answer": "Ik vraag nog een keer waarom hij mij stopt",
-          "goId": "end"
+          "goId": 130
         }
       ]
     },
     {
+      "id": 105,
+      "question": "Je wordt gearresteerd. Je doet je raam niet open en maakt dus geen contact met de agent. Je hebt niet gefilmd en hebt dus geen bewijs als je een klacht wil indienen.",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 124,
+      "question": "De agent kijkt in de kofferbak maar vindt niets. Hij bedankt je voor de medewerking en beëindigt de controle.",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 126,
+      "question": "De agent kijkt niet in de kofferbak. Hij bedankt je voor de medewerking en beëindigt de controle.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 129,
+      "question": "Je wordt gearresteerd. De agent mag niet vorderen dat je de kofferbak moet openen maar je hebt niet gefilmd. Als de agent slecht met je omgaat of geweld gebruikt bij jouw arrestatie, heb je daar geen bewijs van.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 130,
+      "question": "Je wordt gearresteerd. De agent voert een controle uit op grond van de Wegenverkeerswet. Je hebt niet gefilmd, als de agent slecht met je omgaat of geweld gebruikt bij jouw arrestatie, heb je daar geen bewijs van.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 210,
+      "question": "Je wordt gearresteerd. Het filmen van agenten is toegestaan zolang je hun werk niet belemmert. Je kan een klacht indienen over misbruik van bevoegdheid. Je hebt een sterke positie in de klachtenprocedure.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 211,
+      "question": "Je wordt gearresteerd. De agent mag niet vorderen dat je de camera uit moet zetten. Je hebt een sterke positie in de klachtenprocedure.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
       "id": 228,
-      "question": "De agent kijkt in de kofferbak maar vindt niets. Hij bedankt je voor de medewerking en beëindigt de controle",
+      "question": "De agent kijkt in de kofferbak maar vindt niets. Hij bedankt je voor de medewerking en beëindigt de controle. De agent mag niet vorderen dat hij in je kofferbak wil kijken. Hij maakt misbruik van zijn macht.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 229,
+      "question": "Je wordt gearresteerd. Je moet je rijbewijs geven maar hij mag niet vorderen dat hij in je kofferbak wilde kijken. Je wordt namelijk niet verdacht van een strafbaar feit. De agent maakt misbruik van zijn macht.",
+      "image": "path/to/image",
+      "possibleAnswers": [{
+        "answer": "Klaar",
+        "goId": "end"
+      }]
+    },
+    {
+      "id": 230,
+      "question": "Je wordt gearresteerd. De agent voert een controle uit op grond van de Wegenverkeerswet. Jij bent de bestuurder en moet dus op de eerste vordering je rijbewijs geven. Jij weigert drie keer. De agent handelt volgens de wet.",
       "image": "path/to/image",
       "possibleAnswers": [{
         "answer": "Klaar",
