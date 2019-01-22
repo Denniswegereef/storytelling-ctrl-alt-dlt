@@ -1,7 +1,11 @@
 {
   "insights": [
     {
-      "id": 1,
+      "id": [101, 103],
+      "insight": "Test weeetje"
+    },
+    {
+      "id": 10,
       "insight": "Het filmen van agenten is toegestaan zolang je hun werk niet belemmert. Als je filmt en de agent maakt misbruik van zijn macht heb je daar bewijs van."
     },
     {

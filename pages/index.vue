@@ -58,11 +58,13 @@ p {
 }
 .logo-container {
   width: 100%;
-  // background-color: var(--default-color);
-  margin-top: 3rem;
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
   img {
     width: 100%;
   }
+  background-image: url('../assets/images/verkeer.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>

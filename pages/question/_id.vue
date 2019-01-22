@@ -93,8 +93,8 @@ export default {
       return this.currentQuestion.possibleAnswers[random]
     },
     image() {
-      return require(`~/assets/images/1.jpg`)
-      // return require(`~/assets/images/${this.currentQuestion.id}.gif`)
+      // return require(`~/assets/images/1.jpg`)
+      return require(`~/assets/images/${this.currentQuestion.id}.gif`)
     }
   },
   methods: {
@@ -137,7 +137,7 @@ h1 {
   }
 }
 .timer-container {
-  transform: translateY(-14px);
+  transform: translateY(-4px);
 }
 section {
   margin-bottom: 10px;

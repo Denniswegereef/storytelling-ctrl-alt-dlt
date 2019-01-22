@@ -44,7 +44,7 @@ header {
 h2 {
   color: var(--black-color);
   margin-top: 1rem;
-  font-size: 20px;
+  font-size: 19px;
   margin-top: auto;
   margin-bottom: auto;
 }

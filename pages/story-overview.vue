@@ -48,7 +48,6 @@
         :key="index"
         class="overview-single">
         <div v-if="checkAvailable(questionAnswer.id)">
-
           <!-- scenario -->
           <h2>{{ questionAnswer.q }}</h2>
           <p class="small-header">Jouw antwoord</p>
@@ -77,6 +76,9 @@
       <bigButton
         :text="'Deel de app'"
         @click.native="shareApp('Deel de app met al je vrienden en familie')"/>
+      <bigButton
+        :text="'Bekijk alle weetjes'"
+        :to="'/insights'"/>
     </div>
   </section>
 </template>
