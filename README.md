@@ -1,4 +1,8 @@
-# storytelling
+# Mag ik ook nee zeggen?
+
+- [Build Setup](#build-setup)
+- [Code](#code)
+- [Can still be added](#can-still-be-added)
 
 > My flawless Nuxt.js project
 
@@ -20,8 +24,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
-
-RANDOMIZER verschillende contexten
 
 ## Code
 
@@ -46,9 +48,9 @@ return require(`~/assets/images/${this.currentQuestion.id}.gif`
 
 ## Can still be added
 
-- A page where you can see all the _did you know's_.  
+- __A page where you can see all the _did you know's_.__  
 The code for the page is already there, so all you need to do for this is add a button that links to that page. The reason this is not in the app is because right now there aren't enough __different__ insights. If a user would go to the page with all the insights, you would see the same as you would see on the overview page. This page would become useful when more insights are added.
-- The upportunity to share the app or the insight.  
+- __The upportunity to share the app or the insight.__  
 The popup is there, but doens't do anything yet.  
-- Real-time results.  
+- __Real-time results.__  
 We didn't have enough time to actually connect a database to the website. This can still be done. This would give the upportunity for the user to see what percentage would have done the same thing as him/her, and what percentage would have done something else.
