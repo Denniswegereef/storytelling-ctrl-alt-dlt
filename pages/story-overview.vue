@@ -76,9 +76,6 @@
       <bigButton
         :text="'Deel de app'"
         @click.native="shareApp('Deel de app met al je vrienden en familie')"/>
-      <bigButton
-        :text="'Bekijk alle weetjes'"
-        :to="'/insights'"/>
     </div>
   </section>
 </template>
@@ -288,7 +285,7 @@ span {
   }
 }
 
-.icon-container {
+#slide {
   display: flex;
   flex-direction: row;
   align-items: center;

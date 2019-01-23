@@ -31,7 +31,9 @@
                 @clicked="nextQuestion"/>
             </div>
           </div>
-          <div class="question_answers">
+          <div
+            :class="question_answers"
+            :id="'slide'">
             <answerButton
               :current-question="currentQuestion.question"
               :current-id="currentQuestion.id"
@@ -200,5 +202,29 @@ section {
 .page-leave-to {
   opacity: 0;
   transform: translateY(-30px);
+}
+#slide {
+  // position: absolute;
+  // transform: translateX(-350px);
+  opacity: 0;
+  // width: 100px;
+  // height: 100px;
+  // background: blue;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 1s forwards;
+  animation-delay: 1.5s;
+}
+@-webkit-keyframes slide {
+  100% {
+    // transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  100% {
+    // transform: translateX(0px);
+    opacity: 1;
+  }
 }
 </style>
