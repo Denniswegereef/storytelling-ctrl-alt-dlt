@@ -39,10 +39,10 @@ button {
   padding: 18px 10px;
   min-height: 70px;
   transition: all 0.2s;
-  &:hover {
-    transform: scale(1.1);
-    background-color: var(--default-color-dark);
-  }
+  // &:hover {
+  //   transform: scale(1.1);
+  //   background-color: var(--default-color-dark);
+  // }
   &:active {
     transform: scale(1.1);
     background-color: var(--default-color-dark);
@@ -64,8 +64,8 @@ button {
   &:active {
     background-color: var(--second-color-dark);
   }
-  &:hover {
-    background-color: var(--second-color-dark);
-  }
+  // &:hover {
+  //   background-color: var(--second-color-dark);
+  // }
 }
 </style>

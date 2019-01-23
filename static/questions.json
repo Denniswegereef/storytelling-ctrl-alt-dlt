@@ -1,6 +1,6 @@
 {
   "startMessage": "Hello welcome to the quiz",
-  "timeQuestion": 20,
+  "timeQuestion": 200,
   "contextScenario": [
     "Scenario 1",
     "Scenario 2",
@@ -417,7 +417,7 @@
     },
     {
       "id": 230,
-      "question": "Je wordt gearresteerd. De agent voert een controle uit op grond van de Wegenverkeerswet. Jij bent de bestuurder en moet dus op de eerste vordering je rijbewijs geven. Jij weigert drie keer. De agent handelt volgens de wet.",
+      "question": "Je wordt gearresteerd. De agent voert een controle uit op grond van de Wegenverkeerswet. Jij bent de bestuurder en moet dus op de eerste vordering je rijbewijs geven maar jij weigert drie keer.",
       "image": "path/to/image",
       "possibleAnswers": [{
         "answer": "Klaar",
