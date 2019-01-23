@@ -36,7 +36,7 @@ img {
 header {
   background-color: var(--default-color);
   width: 100%;
-  height: 230px;
+  height: 240px;
   padding: var(--default-padding);
   position: relative;
   display: flex;

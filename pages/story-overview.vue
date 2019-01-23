@@ -277,7 +277,7 @@ span {
       rgba(255, 255, 255, 0.5) 92%,
       rgba(255, 255, 255, 0) 100%
     );
-    animation: shine 7s infinite;
+    animation: shine 5s infinite;
   }
   &:hover:after {
     opacity: 1;
