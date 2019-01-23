@@ -234,7 +234,30 @@ span {
     margin-top: 20px;
   }
 }
-
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  div {
+    background-color: var(--second-color);
+    border-radius: 7px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    :hover {
+      background-color: var(--second-color-dark);
+    }
+    img {
+      width: 70%;
+    }
+  }
+}
 .shine {
   overflow: hidden;
   &:after {

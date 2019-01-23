@@ -23,7 +23,7 @@ button {
   font-weight: bold;
   border-style: none;
   border-radius: 7px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: var(--black-color);
   min-height: 30px;
   width: 125px;
