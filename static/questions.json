@@ -213,7 +213,7 @@
           "goId": 224
         },
         {
-          "answer": "Ik blijf rustig en zeg dat ik geen toestemming geef",
+          "answer": "'Mag ik ook nee zeggen?'",
           "goId": 225
         }
       ]
@@ -227,7 +227,7 @@
           "goId": 124
         },
         {
-          "answer": "Ik geef geen toestemming",
+          "answer": "'Mag ik nog nee zeggen?'",
           "goId": 129
         }
       ]

@@ -41,10 +41,10 @@ In the insights.json file all the _did you know's_ are written. They also all ha
 if (this.json.insights.find(x => x.id === id))
 ```
 - In the __/assets__ folder you will find the images and and static scss files.  
-The names of the images are the ID's of the scenarios they belong to.
+The names of the images are the ID's of the scenarios they belong to.  
 ```js
 return require(`~/assets/images/${this.currentQuestion.id}.gif`
-  ```
+```
 
 ## Can still be added
 
