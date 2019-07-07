@@ -45,7 +45,7 @@ The names of the images are the ID's of the scenarios they belong to.
 ```js
 return require(`~/assets/images/${this.currentQuestion.id}.gif`
 ```
-test
+
 ## Can still be added
 
 - __A page where you can see all the _did you know's_.__  
