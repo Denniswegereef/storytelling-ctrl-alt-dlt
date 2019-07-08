@@ -1,24 +1,76 @@
 {
   "endings": [
     {
-      "id": 1,
-      "title": "Ending 1",
-      "text": "Hier wordt iets geeindigd"
+      "id": 105,
+      "title": "Je bent opgepakt",
+      "text": "Wist je dat diten dat en deel dit want omdat",
+      "shareText": "Ik ben gearresteerd door de politie! Wil je weten waarom? Speel de game van Controle Alt Delete."
     },
     {
-      "id": 2,
+      "id": 124,
       "title": "Ending 2",
-      "text": "Het filmen van agenten is toegestaan zolang je hun werk niet belemmert. Als je filmt en de agent maakt misbruik van zijn macht heb je daar bewijs van."
+      "text": "",
+      "shareText": "Ik doe mijn kofferbak open als de politie dat aan mij vraagt. Wat zou jij doen? Ken je rechten en speel de game van Controle Alt Delete."
     },
     {
-      "id": 3,
+      "id": 126,
       "title": "Ending 3",
-      "text": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen."
+      "text": "",
+      "shareText": "Ik doe mijn kofferbak niet open als de politie dat vraagt. Wat zou jij doen? Ken je rechten en speel de game van Controle Alt Delete."
     },
     {
-      "id": 4,
+      "id": 129,
       "title": "Ending 4",
-      "text": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen."
+      "text": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen.",
+      "shareText": "Ik ben gearresteerd door een agent die zijn macht misbruikte, maar ik heb het niet gefilmd. Doe jij het beter? Ken je rechten en speel de game van Controle Alt Delete."
+    },
+    {
+      "id": 130,
+      "title": "Ending 5",
+      "text": "",
+      "shareText": "Ik ben gearresteerd omdat ik vond dat de agent moest uitleggen waarom ik gecontroleerd werd. Wat zou jij doen? Ken je rechten en speel de game van Controle Alt Delete."
+    },
+    {
+      "id": 210,
+      "title": "Ending 6",
+      "text": "",
+      "shareText": "Ik ben gearresteerd door de politie! Doe jij het beter? Ken je rechten en speel de game van Controle Alt Delete."
+    },
+    {
+      "id": 211,
+      "title": "Ending 7",
+      "text": "",
+      "shareText": "Ik ben gearresteerd door de politie omdat ik weigerde te stoppen met filmen! Doe jij het beter? Ken je rechten en speel de game van Controle Alt Delete."
+    },
+    {
+      "id": 224,
+      "title": "Ending 4",
+      "text": "",
+      "shareText": "Ik doe mijn kofferbak open als de politie dat aan mij vraagt. Wat zou jij doen? Ken je rechten en speel de game van Controle Alt Delete."
+    },
+    {
+      "id": 228,
+      "title": "Ending 4",
+      "text": "",
+      "shareText": "Ik film de politie als ik gecontroleerd word. Wat zou jij doen? Ken je rechten en speel de game van Controle Alt Delete."
+    },
+    {
+      "id": 227,
+      "title": "Ending 4",
+      "text": "",
+      "shareText": "Ik doe mijn kofferbak niet open als de politie het vraagt. Wat zou jij doen? Ken je rechten en speel de game van Controle Alt Delete."
+    },
+    {
+      "id": 229,
+      "title": "Ending 4",
+      "text": "",
+      "shareText": "Ik werd gearresteerd omdat ik mijn kofferbak niet opende voor de politie. Wat zou jij doen? Ken je rechten en speel de game van Controle Alt Delete."
+    },
+    {
+      "id": 230,
+      "title": "Ending 4",
+      "text": "",
+      "shareText": "Ik ben gearresteerd omdat ik vond dat de agent moest uitleggen waarom ik gecontroleerd werd. Wat zou jij doen? Ken je rechten en speel de game van Controle Alt Delete."
     }
   ]
 }

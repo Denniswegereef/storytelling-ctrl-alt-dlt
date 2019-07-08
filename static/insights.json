@@ -2,51 +2,47 @@
   "insights": [
     {
       "id": 1,
-      "insight": "Test weeetje"
+      "insight": "Het filmen van agenten is toegestaan zolang je hun werk niet belemmert. De film kan je gebruiken bij een eventuele klacht of aangifte, of om een onterechte boete aan te vechten. Film vanaf het begin. "
     },
     {
       "id": 2,
-      "insight": "Het filmen van agenten is toegestaan zolang je hun werk niet belemmert. Als je filmt en de agent maakt misbruik van zijn macht heb je daar bewijs van."
+      "insight": "De agent vroeg om toestemming, je mocht dus weigeren."
     },
     {
       "id": 3,
-      "insight": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen."
+      "insight": "Het raam dicht laten is niet strafbaar, maar daardoor kan de agent niet gemakkelijk contact met je maken."
     },
     {
       "id": 4,
-      "insight": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen."
+      "insight": "De agent voert een onderzoek uit op grond van de wegenverkeerswet. Je moet je papieren geven."
     },
     {
       "id": 5,
-      "insight": "Filmen en het raam dicht laten is niet strafbaar."
+      "insight": "De agent mag niet zomaar in je kofferbak kijken, je mag dus weigeren als de agent het vraagt."
     },
     {
       "id": 6,
-      "insight": "De agent voert een onderzoek uit op grond van de wegenverkeerswet. Je moet je rijbewijs laten zien."
+      "insight": "Je mag de politie filmen als je het werk niet hindert. Je staat dus in je recht."
     },
     {
       "id": 7,
-      "insight": "De agent voert een onderzoek uit op grond van de wegenverkeerswet. Je moet je rijbewijs laten zien."
+      "insight": "Je mag de politie filmen als je het werk niet hindert. Je hoefde dus niet te stoppen."
     },
     {
       "id": 8,
-      "insight": "Als een agent vraagt of hij in je kofferbak mag kijken mag je nee zeggen, tenzij je wordt verdacht van een strafbaar feit."
+      "insight": "Je mag de politie filmen als je het werk niet hindert. De agent mocht niet vorderen dat je daarmee stopte."
     },
     {
       "id": 9,
-      "insight": "Als een agent vraagt of hij in je kofferbak mag kijken mag je nee zeggen, tenzij je wordt verdacht van een strafbaar feit."
+      "insight": "Als een agent “vordert” ben je verplicht om mee te werken. Ook als je denkt dat de agent ongelijk heeft. Weigeren leidt tot arrestatie."
     },
     {
       "id": 10,
-      "insight": "Een agent mag nooit vorderen dat er niet gefilmd mag worden. Doet hij dit wel dan is dat machtsmisbruik."
+      "insight": "Je had nee mogen zeggen. De agent mag niet zomaar in je kofferbak kijken. De manier waarop de agent dreigt is machtsmisbruik."
     },
     {
       "id": 11,
-      "insight": "Als je je raam niet open doet en dus geen contact maakt met de agent en ook de agent filmt, geef je hem twee redenen om geïriteerd te zijn."
-    },
-    {
-      "id": 12,
-      "insight": "Als een agent vervolgens vordert dat je uitstapt en je werkt nog steeds niet mee, word je gearresteerd vanwege niet voldoen aan ambtelijk bevel."
+      "insight": "In het beleid voor de politie staat dat agenten moeten uitleggen waarom je gecontroleerd wordt."
     }
   ]
 }
