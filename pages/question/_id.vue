@@ -294,11 +294,8 @@ section {
   // width: 100px;
   // height: 100px;
   // background: blue;
-
-  -webkit-animation: slide 0.1s forwards;
-  //-webkit-animation-delay: 2s;
-  // animation-delay: 1.5s;
-  // animation: slide 1s forwards;
+  animation: slide 1s forwards;
+  animation-delay: 0.5s;
 }
 @-webkit-keyframes slide {
   100% {

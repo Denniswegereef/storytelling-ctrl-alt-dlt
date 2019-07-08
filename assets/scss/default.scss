@@ -1,17 +1,21 @@
-// section {
-//   h1 {
-//     color: red;
-//   }
-// }
-
 hr {
   width: 100%;
   margin: 20px 0;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 600px) {
   body {
     max-width: 750px;
+    margin: 0 auto;
+    .bodyContainer {
+      max-width: 750px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 500px) {
+  body {
+    max-width: 500px;
     margin: 0 auto;
     .bodyContainer {
       max-width: 750px;
@@ -22,7 +26,3 @@ hr {
 body {
   height: 93vh;
 }
-// 
-// .container {
-//   height: 93vh;
-// }

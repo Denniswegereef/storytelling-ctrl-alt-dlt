@@ -1,9 +1,9 @@
 <template lang="html">
   <header>
-    <img
+    <!-- <img
       src="../assets/images/home.png"
       alt="home-icon"
-      @click="onClickButton">
+      @click="onClickButton"> -->
     <h2>{{ headerText }}</h2>
   </header>
 </template>
@@ -36,16 +36,20 @@ img {
 header {
   background-color: var(--default-color);
   width: 100%;
-  height: 240px;
+  min-height: 150px;
   padding: var(--default-padding);
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 h2 {
+  transform: translateY(-0.5rem);
   color: var(--black-color);
-  margin-top: 1rem;
+  margin: 0;
+  // margin-top: 1rem;
   font-size: 19px;
-  margin-top: auto;
-  margin-bottom: auto;
+  // margin-top: auto;
+  // margin-bottom: auto;
 }
 </style>

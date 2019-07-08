@@ -7,26 +7,28 @@
       <div class="pop-up-inner">
         <h2>Delen</h2>
         <p>{{ currentInsight }}</p>
-        <div class="icon-container">
-          <div>
+        <div
+          class="icon-container">
+          <div
+            @click="shareFB">
             <img
               src="../assets/images/facebook.png"
               alt="facebook-icon">
           </div>
-          <div>
-            <img
-              src="../assets/images/snapchat.png"
-              alt="facebook-icon">
-          </div>
-          <div>
+          <div
+            @click="shareTW">
             <img
               src="../assets/images/twitter.png"
               alt="facebook-icon">
           </div>
           <div>
-            <img
-              src="../assets/images/whatsapp.png"
-              alt="facebook-icon">
+            <a
+              :href="'whatsapp://send?text=' + ending.shareText"
+              data-action="share/whatsapp/share">
+              <img
+                src="../assets/images/whatsapp.png"
+                alt="facebook-icon">
+            </a>
           </div>
         </div>
         <div class="pop-up-button-holder">
@@ -74,6 +76,35 @@ export default {
     smallHeader,
     bigButton
   },
+  head() {
+    return {
+      meta: [
+        {
+          property: 'og:description',
+          content: 'IK WIL HIER TEKST HEBBEN HALLO'
+        }
+      ]
+    }
+  },
+  // head() {
+  //   return {
+  //     bodyAttrs: {
+  //       id: 'fb-root'
+  //     },
+  //     meta: [
+  //       {
+  //         property: 'og:url',
+  //         content: 'https://www.your-domain.com/your-page.html'
+  //       },
+  //       { property: 'og:type', content: 'website' },
+  //       { property: 'og:title', content: this.ending.title },
+  //       {
+  //         property: 'og:description',
+  //         content: this.ending.text
+  //       }
+  //     ]
+  //   }
+  // },
   data() {
     return {
       json,
@@ -82,7 +113,8 @@ export default {
       ending: {
         title: 'No title',
         text: 'No text avaliable'
-      }
+      },
+      documentURL: 'https://controlealtdelete.nl'
     }
   },
   mounted() {
@@ -91,6 +123,32 @@ export default {
     })
   },
   methods: {
+    shareFB(e) {
+      e.preventDefault()
+      console.log(document.url)
+      var facebookWindow = window.open(
+        'https://www.facebook.com/sharer/sharer.php?u=' +
+          this.documentURL +
+          `&quote=${this.ending.shareText}`,
+        'facebook-popup',
+        'height=350,width=600'
+      )
+      if (facebookWindow.focus) {
+        facebookWindow.focus()
+      }
+      return false
+    },
+    shareTW(e) {
+      window.open(
+        `https://twitter.com/intent/tweet&text='${this.ending.shareText}'`,
+        'twitter-popup',
+        'height=350,width=600'
+      )
+      if (twitterWindow.focus) {
+        twitterWindow.focus()
+      }
+      return false
+    },
     checkAvailable(id) {
       if (this.json.insights.find(x => x.id === id)) {
         return true
@@ -101,14 +159,14 @@ export default {
       this.popModalState = true
     },
     goBack() {
-      this.$store.commit('ending', null)
+      this.$store.commit('nextEnding', null)
       this.currentInsight = ''
       this.popModalState = false
     },
     resetStore() {
       this.$store.commit('nextQuestion', 1)
       this.$store.commit('resetStory')
-      this.$store.commit('ending', null)
+      this.$store.commit('nextEnding', null)
       this.$router.push('/')
     },
     shareInsight(insight) {
@@ -220,7 +278,7 @@ span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -235,9 +293,18 @@ span {
     :hover {
       background-color: var(--second-color-dark);
     }
-    img {
+    img,
+    a {
       width: 70%;
     }
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .shine {
