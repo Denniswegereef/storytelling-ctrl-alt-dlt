@@ -29,7 +29,9 @@ module.exports = {
     { src: '~assets/scss/variables.scss', lang: 'scss' },
     { src: '~assets/scss/headers.scss', lang: 'scss' }
   ],
-
+  generate: {
+    routes: ['/question/1', '/question/10', '/question/201']
+  },
   /*
   ** Plugins to load before mounting the App
   */

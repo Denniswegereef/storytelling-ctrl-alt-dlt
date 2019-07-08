@@ -47,7 +47,7 @@ h1 {
 p {
   // padding: var(--default-padding);
   margin-top: 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   font-size: 20px;
 }
 .bodyContainer {
@@ -58,7 +58,7 @@ p {
 }
 .logo-container {
   width: 100%;
-  padding: 3rem 2rem;
+  padding: 3rem;
   img {
     width: 100%;
   }
@@ -66,5 +66,9 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: 600px) {
+    padding: 6rem;
+  }
 }
 </style>
