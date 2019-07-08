@@ -4,7 +4,9 @@ const createStore = () => {
   return new Vuex.Store({
     state: () => ({
       questionsAnswered: [],
-      jsonData: 'empty'
+      jsonData: 'empty',
+      nextQuestion: 1,
+      ending: 1
     }),
     mutations: {
       addJson(state, json) {
@@ -15,6 +17,12 @@ const createStore = () => {
       },
       resetStory(state) {
         state.questionsAnswered = []
+      },
+      nextQuestion(state, questionNumber) {
+        state.nextQuestion = questionNumber
+      },
+      nextEnding(state, endingNumber) {
+        state.ending = endingNumber
       }
     }
   })

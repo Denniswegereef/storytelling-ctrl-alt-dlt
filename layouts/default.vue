@@ -49,4 +49,20 @@ body {
 .bodyContainer .default {
   margin-top: -10px;
 }
+
+.selected {
+  background-color: !important;
+  animation-name: click;
+  animation-duration: 1.6s;
+  transition-timing-function: ease-in;
+}
+
+@-webkit-keyframes click {
+  from {
+    background-color: #48bb78;
+  }
+  to {
+    background-color: var(--second-color);
+  }
+}
 </style>

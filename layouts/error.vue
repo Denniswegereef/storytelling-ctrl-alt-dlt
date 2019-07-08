@@ -36,6 +36,7 @@ export default {
   methods: {
     togglePopModal() {},
     resetStore() {
+      this.$store.commit('nextQuestion', 1)
       this.$store.commit('resetStory')
       this.$router.push('/')
     }

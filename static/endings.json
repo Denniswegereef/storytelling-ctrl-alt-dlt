@@ -1,0 +1,24 @@
+{
+  "endings": [
+    {
+      "id": 1,
+      "title": "Ending 1",
+      "text": "Hier wordt iets geeindigd"
+    },
+    {
+      "id": 2,
+      "title": "Ending 2",
+      "text": "Het filmen van agenten is toegestaan zolang je hun werk niet belemmert. Als je filmt en de agent maakt misbruik van zijn macht heb je daar bewijs van."
+    },
+    {
+      "id": 3,
+      "title": "Ending 3",
+      "text": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen."
+    },
+    {
+      "id": 4,
+      "title": "Ending 4",
+      "text": "Toestemming om in de kofferbak te kijken mag alleen verkregen worden zonder drang of dreigen."
+    }
+  ]
+}

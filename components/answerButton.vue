@@ -41,11 +41,24 @@ export default {
   watch: {
     force() {
       if (this.force) {
-        this.goNextQuestion(this.$props.nextRandom)
+        console.log(this.$props.nextRandom.answer)
+        this.highLightItem()
+        setTimeout(() => {
+          this.goNextQuestion(this.$props.nextRandom)
+        }, 1500)
       }
     }
   },
   methods: {
+    highLightItem() {
+      let items = document.getElementsByClassName('answer-button')
+
+      Array.prototype.forEach.call(items, item => {
+        if (item.innerText === this.$props.nextRandom.answer) {
+          item.classList.add('selected')
+        }
+      })
+    },
     goNextQuestion(answer) {
       // Send question + answer to the vuex store
       const question = {
@@ -58,6 +71,7 @@ export default {
 
       // Pushing routers
       if (answer.goId === 'end') {
+        this.$store.commit('nextEnding', answer.ending)
         this.$router.push('/story-overview')
         return
       }
@@ -73,14 +87,23 @@ export default {
           const currentPercent = number / 100
           if (n < currentPercent && !rolled) {
             rolled = true
+            this.$store.commit('nextQuestion', answer.randomId[index])
             this.$router.push(`/question/${answer.randomId[index]}`)
           }
         })
         return
       }
 
-      // Just push regular router
-      this.$router.push(`/question/${answer.goId}`)
+      // Just push regular route
+      if (answer.insight) {
+        this.$parent.showPopUp()
+        this.$parent.loadText(answer.insight, answer.goId)
+        document.getElementById('timer-countdown').remove()
+      } else {
+        this.$store.commit('nextQuestion', answer.goId)
+
+        this.$router.push(`/question/${answer.goId}`)
+      }
     }
   }
 }

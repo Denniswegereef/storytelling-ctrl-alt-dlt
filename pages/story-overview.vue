@@ -38,43 +38,17 @@
     </div>
     <!-- header -->
     <smallHeader
-      :header-text="'Overzicht'"
+      :header-text="ending.title"
       @togglePop="toggleModal"/>
     <div class="body-container">
-      <!-- <p class="intro">Je bent klaar! Scroll verder om jouw scenario te bekijken</p> -->
-      <!-- <hr> -->
-      <div
-        v-for="(questionAnswer, index) in $store.state.questionsAnswered"
-        :key="index"
-        class="overview-single">
-        <div v-if="checkAvailable(questionAnswer.id)">
-          <!-- scenario -->
-          <h2>{{ questionAnswer.q }}</h2>
-          <p class="small-header">Jouw antwoord</p>
-          <p>{{ questionAnswer.a }}</p>
-          <div
-            v-if="checkAvailable(questionAnswer.id)"
-            class="insight shine">
-            <span>!</span>
-            <div>
-              <h2>wist je dat</h2>
-              <h2>{{ findInsight(questionAnswer.id) }}</h2>
-              <img
-                src="../assets/images/share.png"
-                alt="share-icon"
-                @click="shareInsight(findInsight(questionAnswer.id))">
-            </div>
-          </div>
-          <hr>
-          <!-- einde scenario -->
-        </div>
-      </div>
+
+      <p>{{ ending.text }}</p>
       <!-- <hr> -->
       <bigButton
         :text="'Begin opnieuw'"
         @click.native="resetStore()"/>
       <bigButton
-        :text="'Deel de app'"
+        :text="'Deel het resultaat'"
         @click.native="shareApp('Deel de app met al je vrienden en familie')"/>
     </div>
   </section>
@@ -82,6 +56,7 @@
 
 <script>
 import json from 'static/insights.json'
+import jsonEnd from 'static/endings.json'
 import smallHeader from '~/components/small/smallHeader.vue'
 import bigButton from '~/components/small/bigButton.vue'
 import smallButton from '~/components/small/smallButton.vue'
@@ -103,8 +78,17 @@ export default {
     return {
       json,
       popModalState: false,
-      currentInsight: ''
+      currentInsight: '',
+      ending: {
+        title: 'No title',
+        text: 'No text avaliable'
+      }
     }
+  },
+  mounted() {
+    this.ending = jsonEnd.endings.find(ending => {
+      return ending.id == this.$store.state.ending
+    })
   },
   methods: {
     checkAvailable(id) {
@@ -117,21 +101,19 @@ export default {
       this.popModalState = true
     },
     goBack() {
+      this.$store.commit('ending', null)
       this.currentInsight = ''
       this.popModalState = false
     },
-    findInsight(id) {
-      let find = this.json.insights.find(x => x.id === id)
-      return find.insight
-    },
     resetStore() {
+      this.$store.commit('nextQuestion', 1)
       this.$store.commit('resetStory')
+      this.$store.commit('ending', null)
       this.$router.push('/')
     },
     shareInsight(insight) {
       this.currentInsight = insight
       this.popModalState = true
-      console.log(insight)
     },
     shareApp(text) {
       this.popModalState = true
