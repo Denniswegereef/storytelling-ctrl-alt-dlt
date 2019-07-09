@@ -16,16 +16,19 @@
       </div>
     </div>
 
-    <div
-      v-if="showPopUpInsight"
-      class="pop-up-modal"
-      @click="goNextQuestionPls">
-      <div class="pop-up-modal__inner">
-        <h2>Wist je dat!</h2>
-        <p>{{ insightText }}</p>
-        <button @click="goNextQuestionPls">Ga verder</button>
+    <transition name="fade">
+      <div
+        v-if="showPopUpInsight"
+        class="pop-up-modal"
+        @click="goNextQuestionPls">
+        <div class="pop-up-modal__inner">
+          <h2>Wist je dat!</h2>
+          <p>{{ insightText }}</p>
+          <button @click="goNextQuestionPls">Ga verder</button>
+        </div>
       </div>
-    </div>
+    </transition>
+
 
     <section>
       <bigHeader
@@ -34,6 +37,11 @@
       <transition name="layout">
         <div class="container">
           <div class="img-container">
+            <div class="logo-cad">
+              <img
+                src="~/static/logo.svg"
+                alt="">
+            </div>
             <img
               :src="image"
               alt="image">
@@ -147,6 +155,7 @@ export default {
       this.$router.push('/')
     },
     goNextQuestionPls() {
+      this.showPopUpInsight = false
       this.$store.commit('nextQuestion', this.nextQuestionID)
       this.$router.push(`/question/${this.nextQuestionID}`)
     }
@@ -220,6 +229,7 @@ img {
 }
 .img-container {
   padding: 0 var(--default-padding);
+  position: relative;
 }
 h1 {
   span {
@@ -308,5 +318,25 @@ section {
     // transform: translateX(0px);
     opacity: 1;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.logo-cad {
+  position: absolute;
+  bottom: 10px;
+  right: var(--default-padding);
+  padding: 1rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2em 0 0 0;
 }
 </style>
