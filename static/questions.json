@@ -32,8 +32,7 @@
         },
         {
           "answer": "Ik stop bij de eerste beste plek die veilig is en begin te filmen",
-          "goId": 201,
-          "insight": 1
+          "goId": 201
         }
       ]
     },
@@ -44,13 +43,11 @@
       "possibleAnswers": [
         {
           "answer": "Ik open het raam",
-          "goId": 102,
-          "insight": 3
+          "goId": 102
         },
         {
           "answer": "Ik wacht op instructies van de agent.",
-          "goId": 103,
-          "insight": 3
+          "goId": 103
         }
       ]
     },
@@ -61,13 +58,11 @@
       "possibleAnswers": [
         {
           "answer": "Ik open het raam",
-          "goId": 202,
-          "insight": 3
+          "goId": 202
         },
         {
           "answer": "Ik wacht op instructies van de agent",
-          "goId": 203,
-          "insight": 3
+          "goId": 203
         }
       ]
     },
@@ -78,19 +73,17 @@
       "possibleAnswers": [
         {
           "answer": "Ik vraag eerst waarom ik aan de kant word gezet",
-          "goId": 127,
-          "insight": 4
+          "goId": 127
         },
         {
           "answer": "Ik geef mijn pasje en papieren",
-          "goId": 120,
-          "insight": 4
+          "goId": 120
         }
       ]
     },
     {
       "id": 103,
-      "question": "De agent vraagt of u even uit de auto wil stappen.",
+      "question": "De agent vraagt of je even uit de auto wil stappen.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -105,18 +98,16 @@
     },
     {
       "id": 104,
-      "question": "Bij deze vorder ik u om uit te stappen.",
+      "question": "De agent vordert je om uit te stappen.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
           "answer": "Ik stap uit",
-          "goId": 102,
-          "insight": 9
+          "goId": 102
         },
         {
           "answer": "Ik vraag waarom hij mij aan de kant heeft gezet.",
-          "goId": 105,
-          "insight": 9
+          "goId": 105
         }
       ]
     },
@@ -127,19 +118,17 @@
       "possibleAnswers": [
         {
           "answer": "Ik vraag eerst waarom ik aan de kant word gezet",
-          "goId": 207,
-          "insight": 4
+          "goId": 207
         },
         {
           "answer": "Ik geef mijn pasje en papieren",
-          "goId": 204,
-          "insight": 4
+          "goId": 204
         }
       ]
     },
     {
       "id": 203,
-      "question": "De agent vraagt of u even uit de auto wil stappen.",
+      "question": "De agent vraagt of je even uit de auto wil stappen.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -154,18 +143,16 @@
     },
     {
       "id": 209,
-      "question": "'Bij deze vorder ik u om uit te stappen.'",
+      "question": "De agent vordert je om uit te stappen.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
           "answer": "Ik stap uit",
-          "goId": 202,
-          "insight": 9
+          "goId": 202
         },
         {
           "answer": "Ik vraag waarom hij mij aan de kant heeft gezet",
-          "goId": 210,
-          "insight": 9
+          "goId": 210
         }
       ]
     },
@@ -180,9 +167,8 @@
           "insight": 2
         },
         {
-          "answer": "Ik blijf rustig en zeg dat ik geen toestemming geef",
-          "goId": 122,
-          "insight": 2
+          "answer": "'Mag ik ook nee zeggen?'",
+          "goId": 122
         }
       ]
     },
@@ -200,7 +186,6 @@
           "answer": "Ik blijf de agent filmen",
           "goId": "random",
           "randomId": [205, 206],
-          "insight": 6,
           "changes": [50, 100]
         }
       ]
@@ -216,10 +201,9 @@
           "goId": 124
         },
         {
-          "answer": "Ik zeg dat hij het niet mag vorderen en ik geef nog steeds geen toestemming",
+          "answer": "Ik blijf rustig en zeg dat ik geen toestemming geef",
           "goId": "random",
           "randomId": [125, 126],
-          "insight": 10,
           "changes": [50, 100]
         }
       ]
@@ -236,8 +220,7 @@
         },
         {
           "answer": "Ik weiger en blijf filmen",
-          "goId": 211,
-          "insight": 9
+          "goId": 211
         }
       ]
     },
@@ -248,13 +231,12 @@
       "possibleAnswers": [
         {
           "answer": "Ik doe de kofferbak open",
-          "goId": 224,
+          "goId": 231,
           "insight": 2
         },
         {
           "answer": "'Mag ik ook nee zeggen?'",
-          "goId": 225,
-          "insight": 2
+          "goId": 225
         }
       ]
     },
@@ -265,13 +247,11 @@
       "possibleAnswers": [
         {
           "answer": "Ik doe de kofferbak open",
-          "goId": 124,
-          "insight": 9
+          "goId": 124
         },
         {
-          "answer": "'Mag ik nog nee zeggen?'",
-          "goId": 129,
-          "insight": 9
+          "answer": "Ik zeg dat hij het niet mag vorderen en ik geef nog steeds geen toestemming",
+          "goId": 129
         }
       ]
     },
@@ -285,9 +265,8 @@
           "goId": 206
         },
         {
-          "answer": "Ik zeg dat hij dat recht heeft, maar vraag waarom hij mij heeft uitgekozen voor een controle",
-          "goId": 208,
-          "insight": 12
+          "answer": "Ik vraag waarom hij mij heeft uitgekozen voor een controle",
+          "goId": 208
         }
       ]
     },
@@ -298,16 +277,15 @@
       "possibleAnswers": [
         {
           "answer": "Ik doe de kofferbak open",
-          "goId": 124,
+          "goId": 224,
           "insight": 10
         },
         {
-          "answer": "Ik vraag of ik verdacht wordt van een strafbaar feit",
+          "answer": "Ik vraag of ik verdacht word van een strafbaar feit",
           "goId": "random",
           "randomId": [226, 227],
-          "changes": [50, 100],
-          "insight": 10
-        }
+          "changes": [50, 100]
+         }
       ]
     },
     {
@@ -320,7 +298,7 @@
           "goId": 120
         },
         {
-          "answer": "Ik zeg dat hij dat recht heeft, maar vraag waarom hij mij heeft uitgekozen voor een controle",
+          "answer": "Ik vraag waarom hij mij heeft uitgekozen voor een controle",
           "goId": 128
         }
       ]
@@ -332,19 +310,17 @@
       "possibleAnswers": [
         {
           "answer": "Ik geef mijn pasje en papieren",
-          "goId": 206,
-          "insight": 9
+          "goId": 206
         },
         {
-          "answer": "Ik vraag nog een keer waarom hij mij stopt",
-          "goId": 230,
-          "insight": 9
+          "answer": "Ik vraag nogmaals aan de agent om uit te leggen waarom hij mij wil controleren",
+          "goId": 230
         }
       ]
     },
     {
       "id": 224,
-      "question": "Je mag doorrijden! De agent kijkt in de kofferbak - die is leeg. De agent bedankt je voor de medewerking.",
+      "question": "Je mag doorrijden! De agent kijkt in je kofferbak maar de manier waarop de agent dreigde is machtsmisbruik. Je filmde vanaf het begin. Je hebt sterk bewijs als je een klacht of aangifte zou willen indienen.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -361,13 +337,11 @@
       "possibleAnswers": [
         {
           "answer": "Ik doe de kofferbak voor hem open",
-          "goId": 228,
-          "insight": 9
+          "goId": 228
         },
         {
           "answer": "Ik geef geen toestemming",
-          "goId": 229,
-          "insight": 9
+          "goId": 229
         }
       ]
     },
@@ -390,19 +364,17 @@
       "possibleAnswers": [
         {
           "answer": "Ik geef mijn pasje en papieren",
-          "goId": 120,
-          "insight": 9
+          "goId": 120
         },
         {
-          "answer": "Ik vraag nog een keer waarom hij mij stopt",
-          "goId": 130,
-          "insight": 9
+          "answer": "Ik vraag nogmaals aan de agent om uit te leggen waarom hij mij wil controleren",
+          "goId": 130
         }
       ]
     },
     {
       "id": 105,
-      "question": "JJe wordt gearresteerd! Je filmde niet, dus als je een klacht of aangifte zou willen indienen heb je geen bewijs.",
+      "question": "Je wordt gearresteerd! Als een agent “vordert” ben je verplicht om mee te werken. Ook als je denkt dat de agent ongelijk heeft. Weigeren leidde tot arrestatie. Je filmde niet, dus als je een klacht of aangifte zou willen indienen heb je geen bewijs.",
       "possibleAnswers": [
         {
           "answer": "Klaar",
@@ -413,7 +385,7 @@
     },
     {
       "id": 124,
-      "question": "Je mag doorrijden! De agent kijkt in de kofferbak - die is leeg. De agent bedankt je voor de medewerking.",
+      "question": "Je mag doorrijden! De agent kijkt in je kofferbak maar de manier waarop de agent dreigde is machtsmisbruik. Je filmde niet, dus als je een klacht of aangifte zou willen indienen heb je geen bewijs.",
       "possibleAnswers": [
         {
           "answer": "Klaar",
@@ -460,7 +432,7 @@
     },
     {
       "id": 210,
-      "question": "Je wordt gearresteerd! Je deed je raam niet open en je wilde niet uitstappen. Je filmde vanaf het begin, dus je hebt sterk bewijs als je een klacht of aangifte zou willen indienen.",
+      "question": "Je wordt gearresteerd! Als een agent “vordert” ben je verplicht om mee te werken. Ook als je denkt dat de agent ongelijk heeft. Weigeren leidde tot arrestatie. Je filmde vanaf het begin, dus je hebt sterk bewijs als je een klacht of aangifte zou willen indienen.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -472,7 +444,7 @@
     },
     {
       "id": 211,
-      "question": "Je wordt gearresteerd! De agent mag niet vorderen dat je de camera uit moet zetten, maar omdat het een vordering was moest je het tóch doen. Je filmde vanaf het begin. Je hebt sterk bewijs als je een klacht of aangifte zou willen indienen.",
+      "question": "Je wordt gearresteerd! De agent mocht niet vorderen dat je de camera uit moest zetten, maar omdat het een vordering was moest je het tóch doen. Je filmde vanaf het begin. Je hebt sterk bewijs als je een klacht of aangifte zou willen indienen vanwege machtmisbruik.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -496,7 +468,7 @@
     },
     {
       "id": 229,
-      "question": "Je wordt gearresteerd! De agent maakte misbruik van zijn macht door te dreigen dat hij je zou meenemen naar het bureau. Je filmde vanaf het begin. Je hebt sterk bewijs als je een klacht of aangifte zou willen indienen.",
+      "question": "Je wordt gearresteerd! Als een agent “vordert” ben je verplicht om mee te werken. Ook als je denkt dat de agent ongelijk heeft. Weigeren leidde tot arrestatie. De agent maakte misbruik van zijn macht door te dreigen dat hij je zou meenemen naar het bureau. Je filmde vanaf het begin. Je hebt sterk bewijs als je een klacht of aangifte zou willen indienen.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -507,8 +479,20 @@
       ]
     },
     {
+      "id": 231,
+      "question": "Je mag doorrijden! De agent kijkt in je kofferbak maar je mocht ook nee zeggen. Je filmde vanaf het begin. Je hebt sterk bewijs als je een klacht of aangifte zou willen indienen.",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Klaar",
+          "ending": 231,
+          "goId": "end"
+        }
+      ]
+    },
+    {
       "id": 230,
-      "question": "Je wordt gearresteerd! De agent moest uitleggen waarom jij gestopt werd, maar jij moest je rijbewijs geven toen het gevorderd werd. Je filmde niet, dus je kan niet bewijzen dat de agent weigerde om een reden te geven voor de controle.",
+      "question": "Je wordt gearresteerd! De agent moest uitleggen waarom jij gestopt werd, maar jij moest je rijbewijs geven toen het gevorderd werd. Je filmde vanaf het begin. Je hebt sterk bewijs als je een klacht of aangifte zou willen indienen.",
       "image": "path/to/image",
       "possibleAnswers": [
         {
