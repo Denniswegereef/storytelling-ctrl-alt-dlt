@@ -68,7 +68,7 @@
     },
     {
       "id": 102,
-      "question": "De agent zegt 'algemene controle' en vraagt om het rij- en kentekenbewijs. Wat doe je?",
+      "question": "De agent zegt 'algemene controle' en vraagt om het rijbewijs. Wat doe je?",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -76,7 +76,7 @@
           "goId": 127
         },
         {
-          "answer": "Ik geef mijn pasje en papieren",
+          "answer": "Ik geef mijn rijbewijs",
           "goId": 120
         }
       ]
@@ -113,7 +113,7 @@
     },
     {
       "id": 202,
-      "question": "De agent zegt 'algemene controle' en vraagt om het rij- en kentekenbewijs. Wat doe je?",
+      "question": "De agent zegt 'algemene controle' en vraagt om het rijbewijs. Wat doe je?",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -121,7 +121,7 @@
           "goId": 207
         },
         {
-          "answer": "Ik geef mijn pasje en papieren",
+          "answer": "Ik geef mijn rijbewijs",
           "goId": 204
         }
       ]
@@ -192,7 +192,7 @@
     },
     {
       "id": 122,
-      "question": "De agent zegt dat hij je auto ook even op het politiebureau kan doorzoeken, als je dat fijner vindt. Wat doe je?",
+      "question": "De agent zegt dat je mag weigeren. Hij zegt dat hij je auto dan even op het politiebureau zal doorzoeken, als je dat fijner vindt. Wat doe je?",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -261,7 +261,7 @@
       "image": "path/to/image",
       "possibleAnswers": [
         {
-          "answer": "Ik geef mijn pasje en papieren",
+          "answer": "Ik geef mijn rijbewijs",
           "goId": 206
         },
         {
@@ -272,7 +272,7 @@
     },
     {
       "id": 225,
-      "question": "De agent zegt dat hij je auto ook even op het politiebureau kan doorzoeken, als je dat fijner vindt. Wat doe je?",
+      "question": "De agent zegt dat je mag weigeren. Hij zegt dat hij je auto dan even op het politiebureau zal doorzoeken, als je dat fijner vindt. Wat doe je?",
       "image": "path/to/image",
       "possibleAnswers": [
         {
@@ -294,7 +294,7 @@
       "image": "path/to/image",
       "possibleAnswers": [
         {
-          "answer": "Ik geef mijn pasje en papieren",
+          "answer": "Ik geef mijn rijbewijs",
           "goId": 120
         },
         {
@@ -309,7 +309,7 @@
       "image": "path/to/image",
       "possibleAnswers": [
         {
-          "answer": "Ik geef mijn pasje en papieren",
+          "answer": "Ik geef mijn rijbewijs",
           "goId": 206
         },
         {
@@ -363,7 +363,7 @@
       "image": "path/to/image",
       "possibleAnswers": [
         {
-          "answer": "Ik geef mijn pasje en papieren",
+          "answer": "Ik geef mijn rijbewijs",
           "goId": 120
         },
         {
