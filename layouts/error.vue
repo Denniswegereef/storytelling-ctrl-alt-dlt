@@ -1,21 +1,21 @@
 <template>
   <section>
-    <popModal
+    <!-- <popModal
       :show="showPopModal"
       @click="togglePopModal()"/>
 
-    <h1>not found</h1>
-    <img
+    <h1>not found</h1> -->
+    <!-- <img
       src="../assets/images/404.gif"
-      alt="gif 404">
+      alt="gif 404"> -->
     <!-- <nuxt-link to="/">Go to home</nuxt-link> -->
     <!-- <bigButton
       :text="'Go to home'"
       :to="'/question/1'"/> -->
-    <bigButton
+    <!-- <bigButton
       :text="'Go to home'"
       :to="'/'"
-      @click.native="resetStore()"/>
+      @click.native="resetStore()"/> -->
   </section>
 </template>
 
@@ -33,13 +33,10 @@ export default {
       showPopModal: ''
     }
   },
-  methods: {
-    togglePopModal() {},
-    resetStore() {
-      this.$store.commit('nextQuestion', 1)
-      this.$store.commit('resetStory')
-      this.$router.push('/')
-    }
+  mounted() {
+    this.$store.commit('nextQuestion', 1)
+    this.$store.commit('resetStory')
+    this.$router.push('/')
   }
 }
 </script>

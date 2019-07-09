@@ -44,8 +44,9 @@
       @togglePop="toggleModal"/> -->
 
     <div class="body-container">
-
-      <p>{{ ending.text }}</p>
+      <img
+        src="~static/eindscherm.gif"
+        alt="eindscherm">
       <!-- <hr> -->
       <bigButton
         :text="'Begin opnieuw'"
@@ -77,25 +78,6 @@ export default {
     smallHeader,
     bigButton
   },
-  // head() {
-  //   return {
-  //     bodyAttrs: {
-  //       id: 'fb-root'
-  //     },
-  //     meta: [
-  //       {
-  //         property: 'og:url',
-  //         content: 'https://www.your-domain.com/your-page.html'
-  //       },
-  //       { property: 'og:type', content: 'website' },
-  //       { property: 'og:title', content: this.ending.title },
-  //       {
-  //         property: 'og:description',
-  //         content: this.ending.text
-  //       }
-  //     ]
-  //   }
-  // },
   data() {
     return {
       json,
@@ -221,6 +203,11 @@ section {
 }
 .body-container {
   padding: 20px var(--default-padding);
+
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 .small-header {
   margin-top: var(--default-margin);
@@ -283,9 +270,6 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    :hover {
-      background-color: var(--second-color-dark);
-    }
     img,
     a {
       width: 70%;
