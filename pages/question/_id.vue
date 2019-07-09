@@ -126,8 +126,6 @@ export default {
   },
   mounted() {
     const insightNumber = 2
-
-    //    console.log(insight)
   },
   methods: {
     showPopUp() {
@@ -196,7 +194,7 @@ button {
   justify-content: center;
   &__inner {
     max-width: 35rem;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;

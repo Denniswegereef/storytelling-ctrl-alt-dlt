@@ -48,12 +48,39 @@
         src="~static/eindscherm.gif"
         alt="eindscherm">
       <!-- <hr> -->
-      <bigButton
-        :text="'Begin opnieuw'"
-        @click.native="resetStore()"/>
-      <bigButton
+      <!-- <bigButton
         :text="'Deel met vrienden/familie'"
-        @click.native="shareApp('Deel de app met al je vrienden en familie')"/>
+        @click.native="shareApp('Deel de app met al je vrienden en familie')"/> -->
+      <h1>Deel de app met al je vrienden en familie</h1>
+      <div
+        class="icon-container">
+        <div
+          @click="shareFB">
+          <img
+            src="../assets/images/facebook.png"
+            alt="facebook-icon">
+        </div>
+        <div
+          @click="shareTW">
+          <img
+            src="../assets/images/twitter.png"
+            alt="facebook-icon">
+        </div>
+        <div>
+          <a
+            :href="'whatsapp://send?text=' + ending.shareText + ' ' + documentURL"
+            data-action="share/whatsapp/share">
+            <img
+              src="../assets/images/whatsapp.png"
+              alt="facebook-icon">
+          </a>
+        </div>
+      </div>
+
+      <bigButton
+        :text="'Speel opnieuw'"
+        :small="'small'"
+        @click.native="resetStore()"/>
     </div>
   </section>
 </template>
@@ -171,7 +198,6 @@ section {
   width: calc(100% + 70px);
   left: 0;
   background-color: var(--second-color);
-  // padding: 0 var(--default-padding);
   padding-right: var(--default-padding);
   display: flex;
   align-items: center;
@@ -201,8 +227,22 @@ section {
 .answer {
   margin-top: 20px;
 }
+
+.default {
+  margin-top: 2.5rem !important;
+}
 .body-container {
   padding: 20px var(--default-padding);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2.5rem 0 1rem 0;
+  }
 
   img {
     width: 100%;
@@ -229,7 +269,7 @@ span {
   align-items: center;
   justify-content: center;
   &-inner {
-    background-color: var(--black-color);
+    background-color: var(--second-color);
     min-height: 200px;
     width: 80%;
     max-width: 450px;
@@ -258,10 +298,11 @@ span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
   div {
     background-color: var(--second-color);
     border-radius: 7px;
@@ -270,9 +311,18 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+    &:first-of-type {
+      margin-right: 1.5rem;
+    }
+    &:last-of-type {
+      margin-left: 1.5rem;
+    }
     img,
     a {
       width: 70%;
+    }
+    img {
+      margin-bottom: 0;
     }
   }
 

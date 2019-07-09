@@ -54,7 +54,13 @@ export default {
 
     Array.prototype.forEach.call(items, item => {
       if (item.innerText.toLowerCase() === 'klaar') {
-        document.getElementById('timer-countdown').remove()
+        let element = document.getElementById('timer-countdown')
+        element.parentNode.removeChild(element)
+        item.style.opacity = '0'
+
+        setTimeout(() => {
+          item.style.opacity = '1'
+        }, 3500)
       }
     })
   },
@@ -107,7 +113,8 @@ export default {
       if (answer.insight) {
         this.$parent.showPopUp()
         this.$parent.loadText(answer.insight, answer.goId)
-        document.getElementById('timer-countdown').remove()
+        let element = document.getElementById('timer-countdown')
+        element.parentNode.removeChild(element)
       } else {
         this.$store.commit('nextQuestion', answer.goId)
 

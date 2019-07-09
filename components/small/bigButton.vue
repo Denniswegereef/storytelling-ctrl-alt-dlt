@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="to">
     <button
-      :class="buttonType"
+      :class="buttonType + ' ' + small"
       type="button">
       {{ text }}
     </button>
@@ -22,6 +22,10 @@ export default {
     buttonType: {
       type: String,
       default: 'default'
+    },
+    small: {
+      type: String,
+      default: ''
     }
   }
 }
@@ -67,5 +71,9 @@ button {
   // &:hover {
   //   background-color: var(--second-color-dark);
   // }
+}
+
+.small {
+  min-height: 0;
 }
 </style>
