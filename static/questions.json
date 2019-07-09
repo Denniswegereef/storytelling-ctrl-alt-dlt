@@ -12,7 +12,7 @@
   "questions": [
     {
       "id": 1,
-      "question": "Je rijdt door de stad, in de auto op weg naar je werk. Je bent te laat, maar toch rijd je niet te hard. Je hebt je raam dicht en je zit alleen in de auto. ",
+      "question": "Je bent opweg naar je werk, je rijdt niet te hard. Je raam is dicht en je zit alleen in de auto.",
       "image": "test.jpg",
       "possibleAnswers": [
         {
@@ -23,15 +23,15 @@
     },
     {
       "id": 10,
-      "question": "Een politieauto gaat voor je rijden en geeft je een stopteken. Wat doe je?",
+      "question": "De politieauto voor je geeft een stopteken. Wat doe je?",
       "image": "test.jpg",
       "possibleAnswers": [
         {
-          "answer": "Ik stop bij de eerste beste plek die veilig is",
+          "answer": "Ik volg de instructies",
           "goId": 101
         },
         {
-          "answer": "Ik stop bij de eerste beste plek die veilig is en begin te filmen",
+          "answer": "Ik volg de instructies en begin te filmen zodra mijn auto stilstaat",
           "goId": 201
         }
       ]
