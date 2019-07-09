@@ -22,7 +22,7 @@
         class="pop-up-modal"
         @click="goNextQuestionPls">
         <div class="pop-up-modal__inner">
-          <h2>Wist je dat!</h2>
+          <h2>Wist je dat?</h2>
           <p>{{ insightText }}</p>
           <button @click="goNextQuestionPls">Ga verder</button>
         </div>
@@ -179,7 +179,6 @@ button {
   display: block;
   margin: 2rem auto 0 auto;
   &:hover {
-    transform: scale(1.1);
     background-color: var(--default-color-dark);
   }
 }
@@ -259,7 +258,7 @@ section {
   &-inner {
     background-color: var(--black-color);
     height: 200px;
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;

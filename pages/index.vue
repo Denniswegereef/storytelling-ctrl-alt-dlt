@@ -7,7 +7,7 @@
     </div>
     <!-- <h1>Mag ik ook nee zeggen?</h1> -->
     <div class="bodyContainer">
-      <p>Ben jij je bewust van je rechten bij een staande houding als automobilist? Hoe brengt jij het er vanaf?</p>
+      <p>Ken jij je rechten bij een staandehouding? Wat zou jij doen?</p>
       <bigButton
         :text="'start'"
         :to="'/question/1'"/>
