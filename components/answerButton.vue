@@ -49,6 +49,15 @@ export default {
       }
     }
   },
+  mounted() {
+    let items = document.getElementsByClassName('answer-button')
+
+    Array.prototype.forEach.call(items, item => {
+      if (item.innerText.toLowerCase() === 'klaar') {
+        document.getElementById('timer-countdown').remove()
+      }
+    })
+  },
   methods: {
     highLightItem() {
       let items = document.getElementsByClassName('answer-button')

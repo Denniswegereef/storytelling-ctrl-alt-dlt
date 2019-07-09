@@ -23,7 +23,7 @@
           </div>
           <div>
             <a
-              :href="'whatsapp://send?text=' + ending.shareText"
+              :href="'whatsapp://send?text=' + ending.shareText + ' ' + documentURL"
               data-action="share/whatsapp/share">
               <img
                 src="../assets/images/whatsapp.png"
@@ -39,9 +39,10 @@
       </div>
     </div>
     <!-- header -->
-    <smallHeader
+    <!-- <smallHeader
       :header-text="ending.title"
-      @togglePop="toggleModal"/>
+      @togglePop="toggleModal"/> -->
+
     <div class="body-container">
 
       <p>{{ ending.text }}</p>
@@ -50,7 +51,7 @@
         :text="'Begin opnieuw'"
         @click.native="resetStore()"/>
       <bigButton
-        :text="'Deel het resultaat'"
+        :text="'Deel met vrienden/familie'"
         @click.native="shareApp('Deel de app met al je vrienden en familie')"/>
     </div>
   </section>
@@ -75,16 +76,6 @@ export default {
     smallButton,
     smallHeader,
     bigButton
-  },
-  head() {
-    return {
-      meta: [
-        {
-          property: 'og:description',
-          content: 'IK WIL HIER TEKST HEBBEN HALLO'
-        }
-      ]
-    }
   },
   // head() {
   //   return {
@@ -114,7 +105,7 @@ export default {
         title: 'No title',
         text: 'No text avaliable'
       },
-      documentURL: 'https://controlealtdelete.nl'
+      documentURL: 'https://controlealtdelete.nl/blog/mag-ik-ook-nee-zeggen'
     }
   },
   mounted() {
@@ -140,7 +131,9 @@ export default {
     },
     shareTW(e) {
       window.open(
-        `https://twitter.com/intent/tweet&text='${this.ending.shareText}'`,
+        `https://twitter.com/intent/tweet?text=${this.ending.shareText}&url=${
+          this.documentURL
+        }`,
         'twitter-popup',
         'height=350,width=600'
       )
