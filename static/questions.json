@@ -163,7 +163,7 @@
       "possibleAnswers": [
         {
           "answer": "Ik doe de kofferbak voor hem open",
-          "goId": 124,
+          "goId": 131,
           "insight": 2
         },
         {
@@ -196,7 +196,7 @@
       "image": "path/to/image",
       "possibleAnswers": [
         {
-          "answer": "Ik doe de kofferbak open",
+          "answer": "Ik doe de kofferbak voor hem open",
           "insight": 10,
           "goId": 124
         },
@@ -426,6 +426,18 @@
         {
           "answer": "Klaar",
           "ending": 130,
+          "goId": "end"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "question": "Je mag doorrijden. De agent kijkt in je kofferbak maar vindt niets. Je wordt bedankt voor de medewerking. Je filmde niet, dus als je een klacht of aangifte zou willen indienen heb je geen bewijs.",
+      "image": "path/to/image",
+      "possibleAnswers": [
+        {
+          "answer": "Klaar",
+          "ending": 131,
           "goId": "end"
         }
       ]
