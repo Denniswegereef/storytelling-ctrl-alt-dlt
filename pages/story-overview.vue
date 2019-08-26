@@ -7,10 +7,10 @@
       <div class="pop-up-inner">
         <h2>Delen</h2>
         <p>{{ currentInsight }}</p>
-        <div
-          class="icon-container">
+        <div class="icon-container">
           <div
             @click="shareFB">
+
             <img
               src="../assets/images/facebook.png"
               alt="facebook-icon">
@@ -24,44 +24,44 @@
           <div>
             <a
               :href="'whatsapp://send?text=' + ending.shareText + ' ' + documentURL"
-              data-action="share/whatsapp/share">
+              data-action="share/whatsapp/share"
+            >
               <img
                 src="../assets/images/whatsapp.png"
                 alt="facebook-icon">
             </a>
           </div>
         </div>
-        <div class="pop-up-button-holder">
+        <div
+          class="pop-up-button-holder">
           <smallButton
             :text="'Annuleer'"
-            @click.native="goBack()"/>
+            @click.native="goBack()" />
         </div>
       </div>
     </div>
     <!-- header -->
     <!-- <smallHeader
       :header-text="ending.title"
-      @togglePop="toggleModal"/> -->
+    @togglePop="toggleModal"/>-->
 
-    <div class="body-container">
+    <div
+      class="body-container">
       <img
         src="~static/eindscherm.gif"
         alt="eindscherm">
       <!-- <hr> -->
       <!-- <bigButton
         :text="'Deel met vrienden/familie'"
-        @click.native="shareApp('Deel de app met al je vrienden en familie')"/> -->
+      @click.native="shareApp('Deel de app met al je vrienden en familie')"/>-->
       <h1>Deel de app met al je vrienden en familie</h1>
-      <div
-        class="icon-container">
-        <div
-          @click="shareFB">
+      <div class="icon-container">
+        <div @click="shareFB">
           <img
             src="../assets/images/facebook.png"
             alt="facebook-icon">
         </div>
-        <div
-          @click="shareTW">
+        <div @click="shareTW">
           <img
             src="../assets/images/twitter.png"
             alt="facebook-icon">
@@ -69,7 +69,8 @@
         <div>
           <a
             :href="'whatsapp://send?text=' + ending.shareText + ' ' + documentURL"
-            data-action="share/whatsapp/share">
+            data-action="share/whatsapp/share"
+          >
             <img
               src="../assets/images/whatsapp.png"
               alt="facebook-icon">
@@ -80,7 +81,7 @@
       <bigButton
         :text="'Speel opnieuw'"
         :small="'small'"
-        @click.native="resetStore()"/>
+        @click.native="resetStore()" />
     </div>
   </section>
 </template>
@@ -114,7 +115,7 @@ export default {
         title: 'No title',
         text: 'No text avaliable'
       },
-      documentURL: 'https://controlealtdelete.nl/blog/mag-ik-ook-nee-zeggen'
+      documentURL: 'https://controlealtdelete.nl/nee'
     }
   },
   mounted() {
@@ -125,7 +126,6 @@ export default {
   methods: {
     shareFB(e) {
       e.preventDefault()
-      console.log(document.url)
       var facebookWindow = window.open(
         'https://www.facebook.com/sharer/sharer.php?u=' +
           this.documentURL +

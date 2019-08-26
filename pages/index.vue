@@ -7,18 +7,28 @@
     </div>
     <!-- <h1>Mag ik ook nee zeggen?</h1> -->
     <div class="bodyContainer">
-      <p>Ken jij je rechten bij een staandehouding? Wat zou jij doen?</p>
+
+      <p>Kies een passend scenario</p>
+
       <bigButton
-        :text="'start'"
-        :to="'/question/1'"/>
+        :text="'Auto scenario'"
+        :to="'/question/1'"
+        @click.native="carScenario"/>
+
+      <div class="divider"/>
+
+      <bigButton
+        :text="'Marechaussee scenario'"
+        :to="'/question/1'"
+        @click.native="marechausseeScenario"/>
     </div>
   </section>
 </template>
 
 <script>
-// import bigHeader from '~/components/bigHeader.vue'
 import bigButton from '~/components/small/bigButton.vue'
-import json from 'static/questions.json'
+import jsonAirport from 'static/questions-airport.json'
+import jsonCar from 'static/questions-car.json'
 
 export default {
   components: {
@@ -26,11 +36,17 @@ export default {
   },
   data() {
     return {
-      json
+      jsonAirport,
+      jsonCar
     }
   },
-  mounted() {
-    this.$store.commit('addJson', this.json)
+  methods: {
+    carScenario() {
+      this.$store.commit('addJson', this.jsonCar)
+    },
+    marechausseeScenario() {
+      this.$store.commit('addJson', this.jsonAirport)
+    }
   }
 }
 </script>
@@ -70,5 +86,10 @@ p {
   @media (min-width: 600px) {
     padding: 6rem;
   }
+}
+
+.divider {
+  height: 1.5rem;
+  width: 100%;
 }
 </style>

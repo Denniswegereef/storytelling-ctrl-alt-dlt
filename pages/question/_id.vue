@@ -121,6 +121,9 @@ export default {
       return this.currentQuestion.possibleAnswers[random]
     },
     image() {
+      if (this.currentQuestion.image === 'airport') {
+        return require(`~/assets/images/2.gif`)
+      }
       return require(`~/assets/images/${this.currentQuestion.id}.gif`)
     }
   },
